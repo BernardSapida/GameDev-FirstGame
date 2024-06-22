@@ -1,0 +1,72 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://scenes/lava_tile/Tile.gd" type="Script" id=1]
+[ext_resource path="res://assets/Sprites/level3/Tile1.png" type="Texture" id=2]
+[ext_resource path="res://assets/Sprites/level3/Tile2.png" type="Texture" id=3]
+[ext_resource path="res://assets/Sprites/level3/Tile3.png" type="Texture" id=4]
+[ext_resource path="res://assets/Sprites/level3/LeftTile.png" type="Texture" id=5]
+[ext_resource path="res://assets/Sprites/level3/RightTile.png" type="Texture" id=6]
+[ext_resource path="res://assets/Sprites/level3/MiddleTile.png" type="Texture" id=7]
+[ext_resource path="res://assets/Audio/box.mp3" type="AudioStream" id=8]
+[ext_resource path="res://assets/Sprites/level3/BottomLeftTile.png" type="Texture" id=9]
+[ext_resource path="res://assets/Sprites/level3/BottomRightTile.png" type="Texture" id=10]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 32, 32 )
+
+[node name="Tile" type="StaticBody2D"]
+script = ExtResource( 1 )
+
+[node name="Tile1" type="Sprite" parent="."]
+visible = false
+position = Vector2( 0, -1.60933e-06 )
+scale = Vector2( 0.369942, 0.444444 )
+texture = ExtResource( 2 )
+
+[node name="Tile2" type="Sprite" parent="."]
+visible = false
+position = Vector2( -9.53674e-07, 1.43051e-06 )
+scale = Vector2( 0.25, 0.42953 )
+texture = ExtResource( 3 )
+
+[node name="Tile3" type="Sprite" parent="."]
+visible = false
+position = Vector2( -0.0924869, -2.563e-06 )
+scale = Vector2( 0.371018, 0.441379 )
+texture = ExtResource( 4 )
+
+[node name="LeftTile" type="Sprite" parent="."]
+visible = false
+position = Vector2( -2.59411e-06, -1.90735e-06 )
+scale = Vector2( 0.402516, 0.25 )
+texture = ExtResource( 5 )
+
+[node name="MiddleTile" type="Sprite" parent="."]
+visible = false
+position = Vector2( -2.59411e-06, -1.90735e-06 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 7 )
+
+[node name="RightTile" type="Sprite" parent="."]
+visible = false
+position = Vector2( -0.100619, -1.90735e-06 )
+scale = Vector2( 0.40379, 0.25 )
+texture = ExtResource( 6 )
+
+[node name="BottomLeftTile" type="Sprite" parent="."]
+visible = false
+position = Vector2( 1.2815e-06, -1.43051e-06 )
+scale = Vector2( 0.407643, 0.463768 )
+texture = ExtResource( 9 )
+
+[node name="BottomRightTile" type="Sprite" parent="."]
+visible = false
+position = Vector2( 2.72691e-06, 4.47035e-07 )
+scale = Vector2( 0.407643, 0.450704 )
+texture = ExtResource( 10 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="BoxSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )

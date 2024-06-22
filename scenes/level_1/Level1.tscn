@@ -1,0 +1,5289 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://assets/Background/backgroundForest.png" type="Texture" id=1]
+[ext_resource path="res://scenes/player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/canvas_layer/CanvasLayer.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/coins/Coins.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/door/Door.tscn" type="PackedScene" id=5]
+[ext_resource path="res://assets/Sprites/TallFence.png" type="Texture" id=6]
+[ext_resource path="res://scenes/dead_end/DeadEnd.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/tile/Tile.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/blade/Blade.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/Sprites/TinyGrass.png" type="Texture" id=10]
+[ext_resource path="res://assets/Audio/level1.mp3" type="AudioStream" id=11]
+[ext_resource path="res://scenes/key/Key.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/life/Life.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/barrier/Barrier.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/clouds/Clouds.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/level_1/BackgroundForest.gd" type="Script" id=16]
+[ext_resource path="res://scenes/level_1/Camera2D.gd" type="Script" id=17]
+
+[node name="Level1" type="Node2D"]
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 3 )]
+
+[node name="BackgroundForest" type="Sprite" parent="."]
+position = Vector2( 520.051, 119.269 )
+scale = Vector2( 1.00925, 0.853516 )
+texture = ExtResource( 1 )
+offset = Vector2( -3.75119, 367.575 )
+script = ExtResource( 16 )
+
+[node name="Clouds" parent="BackgroundForest" instance=ExtResource( 15 )]
+position = Vector2( -515.285, -31.9491 )
+
+[node name="Life" parent="." instance=ExtResource( 13 )]
+position = Vector2( 859, 259 )
+scale = Vector2( 1.00339, 0.844727 )
+
+[node name="Door" parent="." instance=ExtResource( 5 )]
+position = Vector2( 11936, 448 )
+door_color = "Blue"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 512, 300 )
+current = true
+script = ExtResource( 17 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 423, 479 )
+
+[node name="DeadEnd" parent="." instance=ExtResource( 7 )]
+position = Vector2( 3031, 576 )
+
+[node name="DeadEnd2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 4479, 576 )
+
+[node name="Barrier" parent="." instance=ExtResource( 14 )]
+position = Vector2( 383, 252 )
+
+[node name="Tile" parent="." instance=ExtResource( 8 )]
+position = Vector2( 33, 543 )
+
+[node name="Tile2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 97, 543 )
+
+[node name="Tile3" parent="." instance=ExtResource( 8 )]
+position = Vector2( 161, 543 )
+
+[node name="Tile4" parent="." instance=ExtResource( 8 )]
+position = Vector2( 225, 543 )
+
+[node name="Tile5" parent="." instance=ExtResource( 8 )]
+position = Vector2( 289, 543 )
+
+[node name="Tile6" parent="." instance=ExtResource( 8 )]
+position = Vector2( 353, 543 )
+
+[node name="Tile7" parent="." instance=ExtResource( 8 )]
+position = Vector2( 417, 543 )
+
+[node name="Tile8" parent="." instance=ExtResource( 8 )]
+position = Vector2( 481, 543 )
+
+[node name="Tile9" parent="." instance=ExtResource( 8 )]
+position = Vector2( 33, 607 )
+tile_type = "Soil"
+
+[node name="Tile10" parent="." instance=ExtResource( 8 )]
+position = Vector2( 97, 607 )
+tile_type = "Soil"
+
+[node name="Tile11" parent="." instance=ExtResource( 8 )]
+position = Vector2( 161, 607 )
+tile_type = "Soil"
+
+[node name="Tile12" parent="." instance=ExtResource( 8 )]
+position = Vector2( 225, 607 )
+tile_type = "Soil"
+
+[node name="Tile13" parent="." instance=ExtResource( 8 )]
+position = Vector2( 289, 607 )
+tile_type = "Soil"
+
+[node name="Tile14" parent="." instance=ExtResource( 8 )]
+position = Vector2( 353, 607 )
+tile_type = "Soil"
+
+[node name="Tile15" parent="." instance=ExtResource( 8 )]
+position = Vector2( 417, 607 )
+tile_type = "Soil"
+
+[node name="Tile16" parent="." instance=ExtResource( 8 )]
+position = Vector2( 481, 607 )
+tile_type = "Soil"
+
+[node name="Tile17" parent="." instance=ExtResource( 8 )]
+position = Vector2( 33, 671 )
+tile_type = "Soil"
+
+[node name="Tile18" parent="." instance=ExtResource( 8 )]
+position = Vector2( 97, 671 )
+tile_type = "Soil"
+
+[node name="Tile19" parent="." instance=ExtResource( 8 )]
+position = Vector2( 161, 671 )
+tile_type = "Soil"
+
+[node name="Tile20" parent="." instance=ExtResource( 8 )]
+position = Vector2( 225, 671 )
+tile_type = "Soil"
+
+[node name="Tile21" parent="." instance=ExtResource( 8 )]
+position = Vector2( 289, 671 )
+tile_type = "Soil"
+
+[node name="Tile22" parent="." instance=ExtResource( 8 )]
+position = Vector2( 353, 671 )
+tile_type = "Soil"
+
+[node name="Tile23" parent="." instance=ExtResource( 8 )]
+position = Vector2( 417, 671 )
+tile_type = "Soil"
+
+[node name="Tile24" parent="." instance=ExtResource( 8 )]
+position = Vector2( 481, 671 )
+tile_type = "Soil"
+
+[node name="Tile25" parent="." instance=ExtResource( 8 )]
+position = Vector2( 33, 735 )
+tile_type = "Soil"
+
+[node name="Tile26" parent="." instance=ExtResource( 8 )]
+position = Vector2( 97, 735 )
+tile_type = "Soil"
+
+[node name="Tile27" parent="." instance=ExtResource( 8 )]
+position = Vector2( 161, 735 )
+tile_type = "Soil"
+
+[node name="Tile28" parent="." instance=ExtResource( 8 )]
+position = Vector2( 225, 735 )
+tile_type = "Soil"
+
+[node name="Tile29" parent="." instance=ExtResource( 8 )]
+position = Vector2( 289, 735 )
+tile_type = "Soil"
+
+[node name="Tile30" parent="." instance=ExtResource( 8 )]
+position = Vector2( 353, 735 )
+tile_type = "Soil"
+
+[node name="Tile31" parent="." instance=ExtResource( 8 )]
+position = Vector2( 417, 735 )
+tile_type = "Soil"
+
+[node name="Tile32" parent="." instance=ExtResource( 8 )]
+position = Vector2( 481, 735 )
+tile_type = "Soil"
+
+[node name="Tile33" parent="." instance=ExtResource( 8 )]
+position = Vector2( 33, 799 )
+tile_type = "Soil"
+
+[node name="Tile34" parent="." instance=ExtResource( 8 )]
+position = Vector2( 97, 799 )
+tile_type = "Soil"
+
+[node name="Tile41" parent="." instance=ExtResource( 8 )]
+position = Vector2( -95, 543 )
+
+[node name="Tile42" parent="." instance=ExtResource( 8 )]
+position = Vector2( -31, 543 )
+
+[node name="Tile43" parent="." instance=ExtResource( 8 )]
+position = Vector2( -95, 607 )
+tile_type = "Soil"
+
+[node name="Tile44" parent="." instance=ExtResource( 8 )]
+position = Vector2( -31, 607 )
+tile_type = "Soil"
+
+[node name="Tile45" parent="." instance=ExtResource( 8 )]
+position = Vector2( -95, 671 )
+tile_type = "Soil"
+
+[node name="Tile46" parent="." instance=ExtResource( 8 )]
+position = Vector2( -31, 671 )
+tile_type = "Soil"
+
+[node name="Tile47" parent="." instance=ExtResource( 8 )]
+position = Vector2( -95, 735 )
+tile_type = "Soil"
+
+[node name="Tile48" parent="." instance=ExtResource( 8 )]
+position = Vector2( -31, 735 )
+tile_type = "Soil"
+
+[node name="Tile49" parent="." instance=ExtResource( 8 )]
+position = Vector2( -95, 799 )
+tile_type = "Soil"
+
+[node name="Tile50" parent="." instance=ExtResource( 8 )]
+position = Vector2( -31, 799 )
+tile_type = "Soil"
+
+[node name="Tile35" parent="." instance=ExtResource( 8 )]
+position = Vector2( 161, 799 )
+tile_type = "Soil"
+
+[node name="Tile36" parent="." instance=ExtResource( 8 )]
+position = Vector2( 225, 799 )
+tile_type = "Soil"
+
+[node name="Tile37" parent="." instance=ExtResource( 8 )]
+position = Vector2( 289, 799 )
+tile_type = "Soil"
+
+[node name="Tile38" parent="." instance=ExtResource( 8 )]
+position = Vector2( 353, 799 )
+tile_type = "Soil"
+
+[node name="Tile39" parent="." instance=ExtResource( 8 )]
+position = Vector2( 417, 799 )
+tile_type = "Soil"
+
+[node name="Tile40" parent="." instance=ExtResource( 8 )]
+position = Vector2( 481, 799 )
+tile_type = "Soil"
+
+[node name="Tile51" parent="." instance=ExtResource( 8 )]
+position = Vector2( 545, 543 )
+
+[node name="Tile52" parent="." instance=ExtResource( 8 )]
+position = Vector2( 609, 543 )
+
+[node name="Tile53" parent="." instance=ExtResource( 8 )]
+position = Vector2( 673, 543 )
+
+[node name="Tile54" parent="." instance=ExtResource( 8 )]
+position = Vector2( 737, 543 )
+
+[node name="Tile55" parent="." instance=ExtResource( 8 )]
+position = Vector2( 801, 543 )
+
+[node name="Tile56" parent="." instance=ExtResource( 8 )]
+position = Vector2( 545, 607 )
+tile_type = "Soil"
+
+[node name="Tile57" parent="." instance=ExtResource( 8 )]
+position = Vector2( 609, 607 )
+tile_type = "Soil"
+
+[node name="Tile58" parent="." instance=ExtResource( 8 )]
+position = Vector2( 673, 607 )
+tile_type = "Soil"
+
+[node name="Tile59" parent="." instance=ExtResource( 8 )]
+position = Vector2( 737, 607 )
+tile_type = "Soil"
+
+[node name="Tile60" parent="." instance=ExtResource( 8 )]
+position = Vector2( 801, 607 )
+tile_type = "Soil"
+
+[node name="Tile61" parent="." instance=ExtResource( 8 )]
+position = Vector2( 545, 671 )
+tile_type = "Soil"
+
+[node name="Tile62" parent="." instance=ExtResource( 8 )]
+position = Vector2( 609, 671 )
+tile_type = "Soil"
+
+[node name="Tile63" parent="." instance=ExtResource( 8 )]
+position = Vector2( 673, 671 )
+tile_type = "Soil"
+
+[node name="Tile64" parent="." instance=ExtResource( 8 )]
+position = Vector2( 737, 671 )
+tile_type = "Soil"
+
+[node name="Tile65" parent="." instance=ExtResource( 8 )]
+position = Vector2( 801, 671 )
+tile_type = "Soil"
+
+[node name="Tile66" parent="." instance=ExtResource( 8 )]
+position = Vector2( 545, 735 )
+tile_type = "Soil"
+
+[node name="Tile67" parent="." instance=ExtResource( 8 )]
+position = Vector2( 609, 735 )
+tile_type = "Soil"
+
+[node name="Tile68" parent="." instance=ExtResource( 8 )]
+position = Vector2( 673, 735 )
+tile_type = "Soil"
+
+[node name="Tile69" parent="." instance=ExtResource( 8 )]
+position = Vector2( 737, 735 )
+tile_type = "Soil"
+
+[node name="Tile70" parent="." instance=ExtResource( 8 )]
+position = Vector2( 801, 735 )
+tile_type = "Soil"
+
+[node name="Tile71" parent="." instance=ExtResource( 8 )]
+position = Vector2( 545, 799 )
+tile_type = "Soil"
+
+[node name="Tile72" parent="." instance=ExtResource( 8 )]
+position = Vector2( 609, 799 )
+tile_type = "Soil"
+
+[node name="Tile73" parent="." instance=ExtResource( 8 )]
+position = Vector2( 673, 799 )
+tile_type = "Soil"
+
+[node name="Tile74" parent="." instance=ExtResource( 8 )]
+position = Vector2( 737, 799 )
+tile_type = "Soil"
+
+[node name="Tile75" parent="." instance=ExtResource( 8 )]
+position = Vector2( 801, 799 )
+tile_type = "Soil"
+
+[node name="Tile76" parent="." instance=ExtResource( 8 )]
+position = Vector2( 33, 863 )
+tile_type = "Soil"
+
+[node name="Tile77" parent="." instance=ExtResource( 8 )]
+position = Vector2( 97, 863 )
+tile_type = "Soil"
+
+[node name="Tile78" parent="." instance=ExtResource( 8 )]
+position = Vector2( -95, 863 )
+tile_type = "Soil"
+
+[node name="Tile79" parent="." instance=ExtResource( 8 )]
+position = Vector2( -31, 863 )
+tile_type = "Soil"
+
+[node name="Tile80" parent="." instance=ExtResource( 8 )]
+position = Vector2( 161, 863 )
+tile_type = "Soil"
+
+[node name="Tile81" parent="." instance=ExtResource( 8 )]
+position = Vector2( 225, 863 )
+tile_type = "Soil"
+
+[node name="Tile82" parent="." instance=ExtResource( 8 )]
+position = Vector2( 289, 863 )
+tile_type = "Soil"
+
+[node name="Tile83" parent="." instance=ExtResource( 8 )]
+position = Vector2( 353, 863 )
+tile_type = "Soil"
+
+[node name="Tile84" parent="." instance=ExtResource( 8 )]
+position = Vector2( 417, 863 )
+tile_type = "Soil"
+
+[node name="Tile85" parent="." instance=ExtResource( 8 )]
+position = Vector2( 481, 863 )
+tile_type = "Soil"
+
+[node name="Tile86" parent="." instance=ExtResource( 8 )]
+position = Vector2( 545, 863 )
+tile_type = "Soil"
+
+[node name="Tile87" parent="." instance=ExtResource( 8 )]
+position = Vector2( 609, 863 )
+tile_type = "Soil"
+
+[node name="Tile88" parent="." instance=ExtResource( 8 )]
+position = Vector2( 673, 863 )
+tile_type = "Soil"
+
+[node name="Tile89" parent="." instance=ExtResource( 8 )]
+position = Vector2( 737, 863 )
+tile_type = "Soil"
+
+[node name="Tile90" parent="." instance=ExtResource( 8 )]
+position = Vector2( 801, 863 )
+tile_type = "Soil"
+
+[node name="Tile91" parent="." instance=ExtResource( 8 )]
+position = Vector2( 864, 543 )
+
+[node name="Tile92" parent="." instance=ExtResource( 8 )]
+position = Vector2( 928, 543 )
+
+[node name="Tile93" parent="." instance=ExtResource( 8 )]
+position = Vector2( 864, 607 )
+tile_type = "Soil"
+
+[node name="Tile94" parent="." instance=ExtResource( 8 )]
+position = Vector2( 928, 607 )
+tile_type = "Soil"
+
+[node name="Tile95" parent="." instance=ExtResource( 8 )]
+position = Vector2( 864, 671 )
+tile_type = "Soil"
+
+[node name="Tile96" parent="." instance=ExtResource( 8 )]
+position = Vector2( 928, 671 )
+tile_type = "Soil"
+
+[node name="Tile97" parent="." instance=ExtResource( 8 )]
+position = Vector2( 864, 735 )
+tile_type = "Soil"
+
+[node name="Tile98" parent="." instance=ExtResource( 8 )]
+position = Vector2( 928, 735 )
+tile_type = "Soil"
+
+[node name="Tile99" parent="." instance=ExtResource( 8 )]
+position = Vector2( 864, 799 )
+tile_type = "Soil"
+
+[node name="Tile100" parent="." instance=ExtResource( 8 )]
+position = Vector2( 928, 799 )
+tile_type = "Soil"
+
+[node name="Tile101" parent="." instance=ExtResource( 8 )]
+position = Vector2( 992, 543 )
+
+[node name="Tile102" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1056, 543 )
+
+[node name="Tile103" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1120, 543 )
+
+[node name="Tile104" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1184, 543 )
+
+[node name="Tile105" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1248, 543 )
+
+[node name="Tile106" parent="." instance=ExtResource( 8 )]
+position = Vector2( 992, 607 )
+tile_type = "Soil"
+
+[node name="Tile1230" parent="." instance=ExtResource( 8 )]
+position = Vector2( 862, 352 )
+tile_type = "BlockWood"
+
+[node name="Tile1231" parent="." instance=ExtResource( 8 )]
+position = Vector2( 925, 352 )
+tile_type = "BlockWood"
+
+[node name="Tile1232" parent="." instance=ExtResource( 8 )]
+position = Vector2( 988, 352 )
+tile_type = "BlockWood"
+
+[node name="Tile1233" parent="." instance=ExtResource( 8 )]
+position = Vector2( 736, 352 )
+tile_type = "BlockWood"
+
+[node name="Tile1234" parent="." instance=ExtResource( 8 )]
+position = Vector2( 799, 352 )
+tile_type = "BlockWood"
+
+[node name="Tile1235" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4192, 160 )
+tile_type = "BlockWood"
+
+[node name="Tile1236" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4255, 160 )
+tile_type = "BlockWood"
+
+[node name="Tile1237" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4318, 160 )
+tile_type = "BlockWood"
+
+[node name="Tile1238" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4381, 160 )
+tile_type = "BlockWood"
+
+[node name="Tile1239" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4444, 160 )
+tile_type = "BlockWood"
+
+[node name="Tile1240" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4507, 160 )
+tile_type = "BlockWood"
+
+[node name="Tile1241" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4570, 160 )
+tile_type = "BlockWood"
+
+[node name="Tile1242" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4633, 160 )
+tile_type = "BlockWood"
+
+[node name="Tile1243" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4696, 160 )
+tile_type = "BlockWood"
+
+[node name="Tile1244" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4758, 160 )
+tile_type = "BlockWood"
+
+[node name="Tile1245" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4821, 160 )
+tile_type = "BlockWood"
+
+[node name="Tile1246" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4884, 160 )
+tile_type = "BlockWood"
+
+[node name="Tile1247" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5216, 160 )
+tile_type = "BlockWood"
+
+[node name="Tile1248" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5279, 160 )
+tile_type = "BlockWood"
+
+[node name="Tile1249" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5342, 160 )
+tile_type = "BlockWood"
+
+[node name="Tile1250" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5405, 160 )
+tile_type = "BlockWood"
+
+[node name="Tile1251" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5468, 160 )
+tile_type = "BlockWood"
+
+[node name="Tile1252" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5531, 160 )
+tile_type = "BlockWood"
+
+[node name="Tile1253" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5594, 160 )
+tile_type = "BlockWood"
+
+[node name="Tile1254" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5984, 352 )
+tile_type = "BlockWood"
+
+[node name="Tile1255" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6047, 352 )
+tile_type = "BlockWood"
+
+[node name="Tile1256" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6110, 352 )
+tile_type = "BlockWood"
+
+[node name="Tile1257" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6173, 352 )
+tile_type = "BlockWood"
+
+[node name="Tile1258" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10273, 352 )
+tile_type = "BlockWood"
+
+[node name="Tile1259" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10336, 352 )
+tile_type = "BlockYellowDottedWhite"
+
+[node name="Tile1260" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10400, 352 )
+tile_type = "BlockYellowDottedWhite"
+
+[node name="Tile1261" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10463, 352 )
+tile_type = "BlockWood"
+
+[node name="Tile1262" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6496, 352 )
+tile_type = "BlockWood"
+
+[node name="Tile1263" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6688, 352 )
+tile_type = "BlockWood"
+
+[node name="Tile1264" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6688, 160 )
+tile_type = "BlockYellowDottedWhite"
+
+[node name="Tile1265" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6880, 352 )
+tile_type = "BlockWood"
+
+[node name="Tile1266" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7328, 352 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile1267" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7328, 416 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile1268" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7328, 480 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile1269" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7520, 224 )
+tile_type = "BlockWood"
+
+[node name="Tile1270" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7583, 224 )
+tile_type = "BlockWood"
+
+[node name="Tile1271" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7646, 224 )
+tile_type = "BlockWood"
+
+[node name="Tile1272" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7709, 224 )
+tile_type = "BlockWood"
+
+[node name="Tile1273" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7968, 160 )
+tile_type = "BlockWood"
+
+[node name="Tile1274" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8031, 160 )
+tile_type = "BlockYellowDottedWhite"
+
+[node name="Tile1275" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8095, 160 )
+tile_type = "BlockYellowDottedWhite"
+
+[node name="Tile1276" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8032, 352 )
+tile_type = "BlockWood"
+
+[node name="Tile1277" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8095, 352 )
+tile_type = "BlockWood"
+
+[node name="Tile1278" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8158, 160 )
+tile_type = "BlockWood"
+
+[node name="Tile1279" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5600, 352 )
+tile_type = "BlockWood"
+
+[node name="Tile1280" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4704, 480 )
+tile_type = "BlockWood"
+
+[node name="Tile1281" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4000, 352 )
+tile_type = "BlockWood"
+
+[node name="Tile1282" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4063, 352 )
+tile_type = "BlockYellowDottedWhite"
+
+[node name="Tile107" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1056, 607 )
+tile_type = "Soil"
+
+[node name="Tile108" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1120, 607 )
+tile_type = "Soil"
+
+[node name="Tile109" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1184, 607 )
+tile_type = "Soil"
+
+[node name="Tile110" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1248, 607 )
+tile_type = "Soil"
+
+[node name="Tile111" parent="." instance=ExtResource( 8 )]
+position = Vector2( 992, 671 )
+tile_type = "Soil"
+
+[node name="Tile112" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1056, 671 )
+tile_type = "Soil"
+
+[node name="Tile113" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1120, 671 )
+tile_type = "Soil"
+
+[node name="Tile114" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1184, 671 )
+tile_type = "Soil"
+
+[node name="Tile115" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1248, 671 )
+tile_type = "Soil"
+
+[node name="Tile116" parent="." instance=ExtResource( 8 )]
+position = Vector2( 992, 735 )
+tile_type = "Soil"
+
+[node name="Tile117" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1056, 735 )
+tile_type = "Soil"
+
+[node name="Tile118" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1120, 735 )
+tile_type = "Soil"
+
+[node name="Tile119" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1184, 735 )
+tile_type = "Soil"
+
+[node name="Tile120" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1248, 735 )
+tile_type = "Soil"
+
+[node name="Tile121" parent="." instance=ExtResource( 8 )]
+position = Vector2( 992, 799 )
+tile_type = "Soil"
+
+[node name="Tile122" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1056, 799 )
+tile_type = "Soil"
+
+[node name="Tile123" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1120, 799 )
+tile_type = "Soil"
+
+[node name="Tile124" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1184, 799 )
+tile_type = "Soil"
+
+[node name="Tile125" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1248, 799 )
+tile_type = "Soil"
+
+[node name="Tile126" parent="." instance=ExtResource( 8 )]
+position = Vector2( 864, 863 )
+tile_type = "Soil"
+
+[node name="Tile127" parent="." instance=ExtResource( 8 )]
+position = Vector2( 928, 863 )
+tile_type = "Soil"
+
+[node name="Tile128" parent="." instance=ExtResource( 8 )]
+position = Vector2( 992, 863 )
+tile_type = "Soil"
+
+[node name="Tile129" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1056, 863 )
+tile_type = "Soil"
+
+[node name="Tile130" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1120, 863 )
+tile_type = "Soil"
+
+[node name="Tile131" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1184, 863 )
+tile_type = "Soil"
+
+[node name="Tile132" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1248, 863 )
+tile_type = "Soil"
+
+[node name="Tile133" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1312, 543 )
+
+[node name="Tile134" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1376, 543 )
+
+[node name="Tile135" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1440, 543 )
+
+[node name="Tile136" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1312, 607 )
+tile_type = "Soil"
+
+[node name="Tile137" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1376, 607 )
+tile_type = "Soil"
+
+[node name="Tile138" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1440, 607 )
+tile_type = "Soil"
+
+[node name="Tile139" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1312, 671 )
+tile_type = "Soil"
+
+[node name="Tile140" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1376, 671 )
+tile_type = "Soil"
+
+[node name="Tile141" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1440, 671 )
+tile_type = "Soil"
+
+[node name="Tile142" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1312, 735 )
+tile_type = "Soil"
+
+[node name="Tile143" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1376, 735 )
+tile_type = "Soil"
+
+[node name="Tile144" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1440, 735 )
+tile_type = "Soil"
+
+[node name="Tile145" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1312, 799 )
+tile_type = "Soil"
+
+[node name="Tile146" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1376, 799 )
+tile_type = "Soil"
+
+[node name="Tile147" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1440, 799 )
+tile_type = "Soil"
+
+[node name="Tile148" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1312, 863 )
+tile_type = "Soil"
+
+[node name="Tile149" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1376, 863 )
+tile_type = "Soil"
+
+[node name="Tile150" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1440, 863 )
+tile_type = "Soil"
+
+[node name="Tile151" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1504, 351 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile152" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1568, 351 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile154" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1504, 415 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile155" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1568, 415 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile157" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1504, 479 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile158" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1568, 479 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile223" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2080, 351 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile224" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2144, 351 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile225" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2080, 415 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile226" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2144, 415 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile227" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2080, 479 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile228" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2144, 479 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile160" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1504, 543 )
+
+[node name="Tile161" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1568, 543 )
+
+[node name="Tile163" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1504, 607 )
+tile_type = "Soil"
+
+[node name="Tile164" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1568, 607 )
+tile_type = "Soil"
+
+[node name="Tile166" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1504, 671 )
+tile_type = "Soil"
+
+[node name="Tile167" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1568, 671 )
+tile_type = "Soil"
+
+[node name="Tile169" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1504, 735 )
+tile_type = "Soil"
+
+[node name="Tile170" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1568, 735 )
+tile_type = "Soil"
+
+[node name="Tile172" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1504, 799 )
+tile_type = "Soil"
+
+[node name="Tile173" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1568, 799 )
+tile_type = "Soil"
+
+[node name="Tile175" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1504, 863 )
+tile_type = "Soil"
+
+[node name="Tile176" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1568, 863 )
+tile_type = "Soil"
+
+[node name="Tile153" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1632, 543 )
+
+[node name="Tile156" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1696, 543 )
+
+[node name="Tile159" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1632, 607 )
+tile_type = "Soil"
+
+[node name="Tile162" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1696, 607 )
+tile_type = "Soil"
+
+[node name="Tile165" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1632, 671 )
+tile_type = "Soil"
+
+[node name="Tile168" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1696, 671 )
+tile_type = "Soil"
+
+[node name="Tile171" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1632, 735 )
+tile_type = "Soil"
+
+[node name="Tile174" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1696, 735 )
+tile_type = "Soil"
+
+[node name="Tile177" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1632, 799 )
+tile_type = "Soil"
+
+[node name="Tile178" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1696, 799 )
+tile_type = "Soil"
+
+[node name="Tile179" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1632, 863 )
+tile_type = "Soil"
+
+[node name="Tile180" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1696, 863 )
+tile_type = "Soil"
+
+[node name="Tile181" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1760, 543 )
+
+[node name="Tile182" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1824, 543 )
+
+[node name="Tile183" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1888, 543 )
+
+[node name="Tile184" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1760, 607 )
+tile_type = "Soil"
+
+[node name="Tile185" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1824, 607 )
+tile_type = "Soil"
+
+[node name="Tile186" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1888, 607 )
+tile_type = "Soil"
+
+[node name="Tile187" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1760, 671 )
+tile_type = "Soil"
+
+[node name="Tile188" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1824, 671 )
+tile_type = "Soil"
+
+[node name="Tile189" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1888, 671 )
+tile_type = "Soil"
+
+[node name="Tile190" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1760, 735 )
+tile_type = "Soil"
+
+[node name="Tile191" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1824, 735 )
+tile_type = "Soil"
+
+[node name="Tile192" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1888, 735 )
+tile_type = "Soil"
+
+[node name="Tile193" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1760, 799 )
+tile_type = "Soil"
+
+[node name="Tile194" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1824, 799 )
+tile_type = "Soil"
+
+[node name="Tile195" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1888, 799 )
+tile_type = "Soil"
+
+[node name="Tile196" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1760, 863 )
+tile_type = "Soil"
+
+[node name="Tile197" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1824, 863 )
+tile_type = "Soil"
+
+[node name="Tile198" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1888, 863 )
+tile_type = "Soil"
+
+[node name="Tile199" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1952, 543 )
+
+[node name="Tile200" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2016, 543 )
+
+[node name="Tile201" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1952, 607 )
+tile_type = "Soil"
+
+[node name="Tile202" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2016, 607 )
+tile_type = "Soil"
+
+[node name="Tile203" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1952, 671 )
+tile_type = "Soil"
+
+[node name="Tile204" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2016, 671 )
+tile_type = "Soil"
+
+[node name="Tile205" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1952, 735 )
+tile_type = "Soil"
+
+[node name="Tile206" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2016, 735 )
+tile_type = "Soil"
+
+[node name="Tile207" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1952, 799 )
+tile_type = "Soil"
+
+[node name="Tile208" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2016, 799 )
+tile_type = "Soil"
+
+[node name="Tile209" parent="." instance=ExtResource( 8 )]
+position = Vector2( 1952, 863 )
+tile_type = "Soil"
+
+[node name="Tile210" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2016, 863 )
+tile_type = "Soil"
+
+[node name="Tile211" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2080, 543 )
+
+[node name="Tile212" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2144, 543 )
+
+[node name="Tile213" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2080, 607 )
+tile_type = "Soil"
+
+[node name="Tile214" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2144, 607 )
+tile_type = "Soil"
+
+[node name="Tile215" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2080, 671 )
+tile_type = "Soil"
+
+[node name="Tile216" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2144, 671 )
+tile_type = "Soil"
+
+[node name="Tile217" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2080, 735 )
+tile_type = "Soil"
+
+[node name="Tile218" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2144, 735 )
+tile_type = "Soil"
+
+[node name="Tile219" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2080, 799 )
+tile_type = "Soil"
+
+[node name="Tile220" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2144, 799 )
+tile_type = "Soil"
+
+[node name="Tile221" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2080, 863 )
+tile_type = "Soil"
+
+[node name="Tile222" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2144, 863 )
+tile_type = "Soil"
+
+[node name="TallFence" type="Sprite" parent="."]
+position = Vector2( 683.5, 493 )
+scale = Vector2( 0.492186, 0.28125 )
+texture = ExtResource( 6 )
+
+[node name="TallFence2" type="Sprite" parent="."]
+position = Vector2( 735.5, 493 )
+scale = Vector2( 0.492186, 0.28125 )
+texture = ExtResource( 6 )
+
+[node name="TinyGrass" type="Sprite" parent="."]
+position = Vector2( 654, 497 )
+scale = Vector2( 0.402439, 0.4 )
+texture = ExtResource( 10 )
+
+[node name="TinyGrass2" type="Sprite" parent="."]
+position = Vector2( 766, 497 )
+scale = Vector2( 0.402439, 0.4 )
+texture = ExtResource( 10 )
+
+[node name="TallFence3" type="Sprite" parent="."]
+position = Vector2( 835.5, 301 )
+scale = Vector2( 0.492186, 0.28125 )
+texture = ExtResource( 6 )
+
+[node name="TallFence4" type="Sprite" parent="."]
+position = Vector2( 887.5, 301 )
+scale = Vector2( 0.492186, 0.28125 )
+texture = ExtResource( 6 )
+
+[node name="TinyGrass3" type="Sprite" parent="."]
+position = Vector2( 806, 305 )
+scale = Vector2( 0.402439, 0.4 )
+texture = ExtResource( 10 )
+
+[node name="TinyGrass4" type="Sprite" parent="."]
+position = Vector2( 918, 305 )
+scale = Vector2( 0.402439, 0.4 )
+texture = ExtResource( 10 )
+
+[node name="TallFence5" type="Sprite" parent="."]
+position = Vector2( 1795.5, 493 )
+scale = Vector2( 0.492186, 0.28125 )
+texture = ExtResource( 6 )
+
+[node name="TallFence6" type="Sprite" parent="."]
+position = Vector2( 1847.5, 493 )
+scale = Vector2( 0.492186, 0.28125 )
+texture = ExtResource( 6 )
+
+[node name="TinyGrass5" type="Sprite" parent="."]
+position = Vector2( 1766, 497 )
+scale = Vector2( 0.402439, 0.4 )
+texture = ExtResource( 10 )
+
+[node name="TinyGrass6" type="Sprite" parent="."]
+position = Vector2( 1878, 497 )
+scale = Vector2( 0.402439, 0.4 )
+texture = ExtResource( 10 )
+
+[node name="TallFence7" type="Sprite" parent="."]
+position = Vector2( 2411.5, 493 )
+scale = Vector2( 0.492186, 0.28125 )
+texture = ExtResource( 6 )
+
+[node name="TallFence8" type="Sprite" parent="."]
+position = Vector2( 2463.5, 493 )
+scale = Vector2( 0.492186, 0.28125 )
+texture = ExtResource( 6 )
+
+[node name="TinyGrass7" type="Sprite" parent="."]
+position = Vector2( 2382, 497 )
+scale = Vector2( 0.402439, 0.4 )
+texture = ExtResource( 10 )
+
+[node name="TinyGrass8" type="Sprite" parent="."]
+position = Vector2( 2494, 497 )
+scale = Vector2( 0.402439, 0.4 )
+texture = ExtResource( 10 )
+
+[node name="TallFence9" type="Sprite" parent="."]
+position = Vector2( 4203.5, 110 )
+scale = Vector2( 0.492186, 0.28125 )
+texture = ExtResource( 6 )
+
+[node name="TallFence10" type="Sprite" parent="."]
+position = Vector2( 4255.5, 110 )
+scale = Vector2( 0.492186, 0.28125 )
+texture = ExtResource( 6 )
+
+[node name="TallFence11" type="Sprite" parent="."]
+position = Vector2( 4306.5, 110 )
+scale = Vector2( 0.492186, 0.28125 )
+texture = ExtResource( 6 )
+
+[node name="TallFence12" type="Sprite" parent="."]
+position = Vector2( 4358.5, 110 )
+scale = Vector2( 0.492186, 0.28125 )
+texture = ExtResource( 6 )
+
+[node name="TallFence13" type="Sprite" parent="."]
+position = Vector2( 4410.5, 110 )
+scale = Vector2( 0.492186, 0.28125 )
+texture = ExtResource( 6 )
+
+[node name="TallFence14" type="Sprite" parent="."]
+position = Vector2( 4461.5, 110 )
+scale = Vector2( 0.492186, 0.28125 )
+texture = ExtResource( 6 )
+
+[node name="TallFence15" type="Sprite" parent="."]
+position = Vector2( 4515.5, 110 )
+scale = Vector2( 0.492186, 0.28125 )
+texture = ExtResource( 6 )
+
+[node name="TallFence16" type="Sprite" parent="."]
+position = Vector2( 4567.5, 110 )
+scale = Vector2( 0.492186, 0.28125 )
+texture = ExtResource( 6 )
+
+[node name="TallFence17" type="Sprite" parent="."]
+position = Vector2( 4618.5, 110 )
+scale = Vector2( 0.492186, 0.28125 )
+texture = ExtResource( 6 )
+
+[node name="TallFence18" type="Sprite" parent="."]
+position = Vector2( 4670.5, 110 )
+scale = Vector2( 0.492186, 0.28125 )
+texture = ExtResource( 6 )
+
+[node name="TallFence19" type="Sprite" parent="."]
+position = Vector2( 4722.5, 110 )
+scale = Vector2( 0.492186, 0.28125 )
+texture = ExtResource( 6 )
+
+[node name="TallFence20" type="Sprite" parent="."]
+position = Vector2( 4773.5, 110 )
+scale = Vector2( 0.492186, 0.28125 )
+texture = ExtResource( 6 )
+
+[node name="TallFence21" type="Sprite" parent="."]
+position = Vector2( 4826.5, 110 )
+scale = Vector2( 0.492186, 0.28125 )
+texture = ExtResource( 6 )
+
+[node name="TallFence22" type="Sprite" parent="."]
+position = Vector2( 4877.5, 110 )
+scale = Vector2( 0.492186, 0.28125 )
+texture = ExtResource( 6 )
+
+[node name="TinyGrass9" type="Sprite" parent="."]
+position = Vector2( 4174, 114 )
+scale = Vector2( 0.402439, 0.4 )
+texture = ExtResource( 10 )
+
+[node name="TinyGrass10" type="Sprite" parent="."]
+position = Vector2( 4902, 114 )
+scale = Vector2( 0.402439, 0.4 )
+texture = ExtResource( 10 )
+
+[node name="Coins" parent="." instance=ExtResource( 4 )]
+position = Vector2( 863, 463 )
+
+[node name="Coins2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1822, 411 )
+
+[node name="Coins3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 2439, 416 )
+
+[node name="Coins4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3646, 458 )
+
+[node name="Coins5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4422, 458 )
+
+[node name="Coins6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4422, 58 )
+
+[node name="Coins7" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4734, 58 )
+
+[node name="Coins9" parent="." instance=ExtResource( 4 )]
+position = Vector2( 5374, 58 )
+
+[node name="Coins10" parent="." instance=ExtResource( 4 )]
+position = Vector2( 5599, 258 )
+
+[node name="Coins11" parent="." instance=ExtResource( 4 )]
+position = Vector2( 6079, 258 )
+
+[node name="Coins12" parent="." instance=ExtResource( 4 )]
+position = Vector2( 6495, 258 )
+
+[node name="Coins13" parent="." instance=ExtResource( 4 )]
+position = Vector2( 6687, 258 )
+
+[node name="Coins14" parent="." instance=ExtResource( 4 )]
+position = Vector2( 6687, 58 )
+
+[node name="Coins15" parent="." instance=ExtResource( 4 )]
+position = Vector2( 6879, 250 )
+
+[node name="Coins16" parent="." instance=ExtResource( 4 )]
+position = Vector2( 7611, 450 )
+
+[node name="Coins17" parent="." instance=ExtResource( 4 )]
+position = Vector2( 8323, 450 )
+
+[node name="Coins18" parent="." instance=ExtResource( 4 )]
+position = Vector2( 10370, 450 )
+
+[node name="Coins19" parent="." instance=ExtResource( 4 )]
+position = Vector2( 10370, 258 )
+
+[node name="Coins8" parent="." instance=ExtResource( 4 )]
+position = Vector2( 4034, 250 )
+
+[node name="Tile229" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2656, 351 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile230" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2720, 351 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile231" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2656, 415 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile232" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2720, 415 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile233" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2656, 479 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile234" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2720, 479 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile235" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2208, 543 )
+
+[node name="Tile236" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2272, 543 )
+
+[node name="Tile237" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2208, 607 )
+tile_type = "Soil"
+
+[node name="Tile238" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2272, 607 )
+tile_type = "Soil"
+
+[node name="Tile239" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2208, 671 )
+tile_type = "Soil"
+
+[node name="Tile240" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2272, 671 )
+tile_type = "Soil"
+
+[node name="Tile241" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2208, 735 )
+tile_type = "Soil"
+
+[node name="Tile242" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2272, 735 )
+tile_type = "Soil"
+
+[node name="Tile243" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2208, 799 )
+tile_type = "Soil"
+
+[node name="Tile244" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2272, 799 )
+tile_type = "Soil"
+
+[node name="Tile245" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2208, 863 )
+tile_type = "Soil"
+
+[node name="Tile246" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2272, 863 )
+tile_type = "Soil"
+
+[node name="Tile247" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2336, 543 )
+
+[node name="Tile248" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2400, 543 )
+
+[node name="Tile249" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2464, 543 )
+
+[node name="Tile250" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2336, 607 )
+tile_type = "Soil"
+
+[node name="Tile251" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2400, 607 )
+tile_type = "Soil"
+
+[node name="Tile252" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2464, 607 )
+tile_type = "Soil"
+
+[node name="Tile253" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2336, 671 )
+tile_type = "Soil"
+
+[node name="Tile254" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2400, 671 )
+tile_type = "Soil"
+
+[node name="Tile255" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2464, 671 )
+tile_type = "Soil"
+
+[node name="Tile256" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2336, 735 )
+tile_type = "Soil"
+
+[node name="Tile257" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2400, 735 )
+tile_type = "Soil"
+
+[node name="Tile258" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2464, 735 )
+tile_type = "Soil"
+
+[node name="Tile259" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2336, 799 )
+tile_type = "Soil"
+
+[node name="Tile260" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2400, 799 )
+tile_type = "Soil"
+
+[node name="Tile261" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2464, 799 )
+tile_type = "Soil"
+
+[node name="Tile262" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2336, 863 )
+tile_type = "Soil"
+
+[node name="Tile263" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2400, 863 )
+tile_type = "Soil"
+
+[node name="Tile264" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2464, 863 )
+tile_type = "Soil"
+
+[node name="Tile265" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2528, 543 )
+
+[node name="Tile266" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2592, 543 )
+
+[node name="Tile267" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2528, 607 )
+tile_type = "Soil"
+
+[node name="Tile268" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2592, 607 )
+tile_type = "Soil"
+
+[node name="Tile269" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2528, 671 )
+tile_type = "Soil"
+
+[node name="Tile270" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2592, 671 )
+tile_type = "Soil"
+
+[node name="Tile271" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2528, 735 )
+tile_type = "Soil"
+
+[node name="Tile272" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2592, 735 )
+tile_type = "Soil"
+
+[node name="Tile273" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2528, 799 )
+tile_type = "Soil"
+
+[node name="Tile274" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2592, 799 )
+tile_type = "Soil"
+
+[node name="Tile275" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2528, 863 )
+tile_type = "Soil"
+
+[node name="Tile276" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2592, 863 )
+tile_type = "Soil"
+
+[node name="Tile289" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2784, 543 )
+
+[node name="Tile290" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2848, 543 )
+
+[node name="Tile291" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2784, 607 )
+tile_type = "Soil"
+
+[node name="Tile292" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2848, 607 )
+tile_type = "Soil"
+
+[node name="Tile293" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2784, 671 )
+tile_type = "Soil"
+
+[node name="Tile294" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2848, 671 )
+tile_type = "Soil"
+
+[node name="Tile295" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2784, 735 )
+tile_type = "Soil"
+
+[node name="Tile296" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2848, 735 )
+tile_type = "Soil"
+
+[node name="Tile297" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2784, 799 )
+tile_type = "Soil"
+
+[node name="Tile298" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2848, 799 )
+tile_type = "Soil"
+
+[node name="Tile299" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2784, 863 )
+tile_type = "Soil"
+
+[node name="Tile300" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2848, 863 )
+tile_type = "Soil"
+
+[node name="Tile301" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2912, 543 )
+
+[node name="Tile302" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2976, 543 )
+
+[node name="Tile303" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3040, 543 )
+
+[node name="Tile304" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2912, 607 )
+tile_type = "Soil"
+
+[node name="Tile305" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2976, 607 )
+tile_type = "Soil"
+
+[node name="Tile306" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3040, 607 )
+tile_type = "Soil"
+
+[node name="Tile307" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2912, 671 )
+tile_type = "Soil"
+
+[node name="Tile308" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2976, 671 )
+tile_type = "Soil"
+
+[node name="Tile309" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3040, 671 )
+tile_type = "Soil"
+
+[node name="Tile310" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2912, 735 )
+tile_type = "Soil"
+
+[node name="Tile311" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2976, 735 )
+tile_type = "Soil"
+
+[node name="Tile312" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3040, 735 )
+tile_type = "Soil"
+
+[node name="Tile313" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2912, 799 )
+tile_type = "Soil"
+
+[node name="Tile314" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2976, 799 )
+tile_type = "Soil"
+
+[node name="Tile315" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3040, 799 )
+tile_type = "Soil"
+
+[node name="Tile316" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2912, 863 )
+tile_type = "Soil"
+
+[node name="Tile317" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2976, 863 )
+tile_type = "Soil"
+
+[node name="Tile318" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3040, 863 )
+tile_type = "Soil"
+
+[node name="Tile319" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3104, 543 )
+
+[node name="Tile320" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3168, 543 )
+
+[node name="Tile321" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3104, 607 )
+tile_type = "Soil"
+
+[node name="Tile322" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3168, 607 )
+tile_type = "Soil"
+
+[node name="Tile323" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3104, 671 )
+tile_type = "Soil"
+
+[node name="Tile324" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3168, 671 )
+tile_type = "Soil"
+
+[node name="Tile325" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3104, 735 )
+tile_type = "Soil"
+
+[node name="Tile326" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3168, 735 )
+tile_type = "Soil"
+
+[node name="Tile327" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3104, 799 )
+tile_type = "Soil"
+
+[node name="Tile328" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3168, 799 )
+tile_type = "Soil"
+
+[node name="Tile329" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3104, 863 )
+tile_type = "Soil"
+
+[node name="Tile330" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3168, 863 )
+tile_type = "Soil"
+
+[node name="Tile331" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3360, 543 )
+
+[node name="Tile1229" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3360, 479 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile332" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3424, 543 )
+
+[node name="Tile333" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3360, 607 )
+tile_type = "Soil"
+
+[node name="Tile334" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3424, 607 )
+tile_type = "Soil"
+
+[node name="Tile335" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3360, 671 )
+tile_type = "Soil"
+
+[node name="Tile336" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3424, 671 )
+tile_type = "Soil"
+
+[node name="Tile337" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3360, 735 )
+tile_type = "Soil"
+
+[node name="Tile338" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3424, 735 )
+tile_type = "Soil"
+
+[node name="Tile339" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3360, 799 )
+tile_type = "Soil"
+
+[node name="Tile340" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3424, 799 )
+tile_type = "Soil"
+
+[node name="Tile341" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3360, 863 )
+tile_type = "Soil"
+
+[node name="Tile342" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3424, 863 )
+tile_type = "Soil"
+
+[node name="Tile343" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3488, 543 )
+
+[node name="Tile344" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3552, 543 )
+
+[node name="Tile345" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3616, 543 )
+
+[node name="Tile346" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3488, 607 )
+tile_type = "Soil"
+
+[node name="Tile347" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3552, 607 )
+tile_type = "Soil"
+
+[node name="Tile348" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3616, 607 )
+tile_type = "Soil"
+
+[node name="Tile349" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3488, 671 )
+tile_type = "Soil"
+
+[node name="Tile350" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3552, 671 )
+tile_type = "Soil"
+
+[node name="Tile351" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3616, 671 )
+tile_type = "Soil"
+
+[node name="Tile352" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3488, 735 )
+tile_type = "Soil"
+
+[node name="Tile353" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3552, 735 )
+tile_type = "Soil"
+
+[node name="Tile354" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3616, 735 )
+tile_type = "Soil"
+
+[node name="Tile355" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3488, 799 )
+tile_type = "Soil"
+
+[node name="Tile356" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3552, 799 )
+tile_type = "Soil"
+
+[node name="Tile357" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3616, 799 )
+tile_type = "Soil"
+
+[node name="Tile358" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3488, 863 )
+tile_type = "Soil"
+
+[node name="Tile359" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3552, 863 )
+tile_type = "Soil"
+
+[node name="Tile360" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3616, 863 )
+tile_type = "Soil"
+
+[node name="Tile361" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3680, 543 )
+
+[node name="Tile362" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3744, 543 )
+
+[node name="Tile363" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3680, 607 )
+tile_type = "Soil"
+
+[node name="Tile364" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3744, 607 )
+tile_type = "Soil"
+
+[node name="Tile365" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3680, 671 )
+tile_type = "Soil"
+
+[node name="Tile366" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3744, 671 )
+tile_type = "Soil"
+
+[node name="Tile367" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3680, 735 )
+tile_type = "Soil"
+
+[node name="Tile368" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3744, 735 )
+tile_type = "Soil"
+
+[node name="Tile369" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3680, 799 )
+tile_type = "Soil"
+
+[node name="Tile370" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3744, 799 )
+tile_type = "Soil"
+
+[node name="Tile371" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3680, 863 )
+tile_type = "Soil"
+
+[node name="Tile372" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3744, 863 )
+tile_type = "Soil"
+
+[node name="Tile373" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3808, 543 )
+
+[node name="Tile374" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3872, 543 )
+
+[node name="Tile375" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3808, 607 )
+tile_type = "Soil"
+
+[node name="Tile376" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3872, 607 )
+tile_type = "Soil"
+
+[node name="Tile377" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3808, 671 )
+tile_type = "Soil"
+
+[node name="Tile378" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3872, 671 )
+tile_type = "Soil"
+
+[node name="Tile379" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3808, 735 )
+tile_type = "Soil"
+
+[node name="Tile380" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3872, 735 )
+tile_type = "Soil"
+
+[node name="Tile381" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3808, 799 )
+tile_type = "Soil"
+
+[node name="Tile382" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3872, 799 )
+tile_type = "Soil"
+
+[node name="Tile383" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3808, 863 )
+tile_type = "Soil"
+
+[node name="Tile384" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3872, 863 )
+tile_type = "Soil"
+
+[node name="Tile385" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3936, 543 )
+
+[node name="Tile386" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4000, 543 )
+
+[node name="Tile387" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4064, 543 )
+
+[node name="Tile388" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3936, 607 )
+tile_type = "Soil"
+
+[node name="Tile389" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4000, 607 )
+tile_type = "Soil"
+
+[node name="Tile390" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4064, 607 )
+tile_type = "Soil"
+
+[node name="Tile391" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3936, 671 )
+tile_type = "Soil"
+
+[node name="Tile392" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4000, 671 )
+tile_type = "Soil"
+
+[node name="Tile393" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4064, 671 )
+tile_type = "Soil"
+
+[node name="Tile394" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3936, 735 )
+tile_type = "Soil"
+
+[node name="Tile395" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4000, 735 )
+tile_type = "Soil"
+
+[node name="Tile396" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4064, 735 )
+tile_type = "Soil"
+
+[node name="Tile397" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3936, 799 )
+tile_type = "Soil"
+
+[node name="Tile398" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4000, 799 )
+tile_type = "Soil"
+
+[node name="Tile399" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4064, 799 )
+tile_type = "Soil"
+
+[node name="Tile400" parent="." instance=ExtResource( 8 )]
+position = Vector2( 3936, 863 )
+tile_type = "Soil"
+
+[node name="Tile401" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4000, 863 )
+tile_type = "Soil"
+
+[node name="Tile402" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4064, 863 )
+tile_type = "Soil"
+
+[node name="Tile403" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4128, 543 )
+
+[node name="Tile404" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4192, 543 )
+
+[node name="Tile405" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4128, 607 )
+tile_type = "Soil"
+
+[node name="Tile406" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4192, 607 )
+tile_type = "Soil"
+
+[node name="Tile407" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4128, 671 )
+tile_type = "Soil"
+
+[node name="Tile408" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4192, 671 )
+tile_type = "Soil"
+
+[node name="Tile409" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4128, 735 )
+tile_type = "Soil"
+
+[node name="Tile410" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4192, 735 )
+tile_type = "Soil"
+
+[node name="Tile411" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4128, 799 )
+tile_type = "Soil"
+
+[node name="Tile412" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4192, 799 )
+tile_type = "Soil"
+
+[node name="Tile413" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4128, 863 )
+tile_type = "Soil"
+
+[node name="Tile414" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4192, 863 )
+tile_type = "Soil"
+
+[node name="Tile415" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4256, 543 )
+
+[node name="Tile416" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4256, 607 )
+tile_type = "Soil"
+
+[node name="Tile417" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4256, 671 )
+tile_type = "Soil"
+
+[node name="Tile418" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4256, 735 )
+tile_type = "Soil"
+
+[node name="Tile419" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4256, 799 )
+tile_type = "Soil"
+
+[node name="Tile420" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4256, 863 )
+tile_type = "Soil"
+
+[node name="Tile421" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4320, 543 )
+
+[node name="Tile422" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4384, 543 )
+
+[node name="Tile423" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4320, 607 )
+tile_type = "Soil"
+
+[node name="Tile424" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4384, 607 )
+tile_type = "Soil"
+
+[node name="Tile425" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4320, 671 )
+tile_type = "Soil"
+
+[node name="Tile426" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4384, 671 )
+tile_type = "Soil"
+
+[node name="Tile427" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4320, 735 )
+tile_type = "Soil"
+
+[node name="Tile428" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4384, 735 )
+tile_type = "Soil"
+
+[node name="Tile429" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4320, 799 )
+tile_type = "Soil"
+
+[node name="Tile430" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4384, 799 )
+tile_type = "Soil"
+
+[node name="Tile431" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4320, 863 )
+tile_type = "Soil"
+
+[node name="Tile432" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4384, 863 )
+tile_type = "Soil"
+
+[node name="Tile433" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4448, 543 )
+
+[node name="Tile434" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4512, 543 )
+
+[node name="Tile435" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4576, 543 )
+
+[node name="Tile436" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4448, 607 )
+tile_type = "Soil"
+
+[node name="Tile437" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4512, 607 )
+tile_type = "Soil"
+
+[node name="Tile438" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4576, 607 )
+tile_type = "Soil"
+
+[node name="Tile439" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4448, 671 )
+tile_type = "Soil"
+
+[node name="Tile440" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4512, 671 )
+tile_type = "Soil"
+
+[node name="Tile441" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4576, 671 )
+tile_type = "Soil"
+
+[node name="Tile442" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4448, 735 )
+tile_type = "Soil"
+
+[node name="Tile443" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4512, 735 )
+tile_type = "Soil"
+
+[node name="Tile444" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4576, 735 )
+tile_type = "Soil"
+
+[node name="Tile445" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4448, 799 )
+tile_type = "Soil"
+
+[node name="Tile446" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4512, 799 )
+tile_type = "Soil"
+
+[node name="Tile447" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4576, 799 )
+tile_type = "Soil"
+
+[node name="Tile448" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4448, 863 )
+tile_type = "Soil"
+
+[node name="Tile449" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4512, 863 )
+tile_type = "Soil"
+
+[node name="Tile450" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4576, 863 )
+tile_type = "Soil"
+
+[node name="Tile451" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4640, 543 )
+
+[node name="Tile452" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4704, 543 )
+
+[node name="Tile453" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4640, 607 )
+tile_type = "Soil"
+
+[node name="Tile454" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4704, 607 )
+tile_type = "Soil"
+
+[node name="Tile455" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4640, 671 )
+tile_type = "Soil"
+
+[node name="Tile456" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4704, 671 )
+tile_type = "Soil"
+
+[node name="Tile457" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4640, 735 )
+tile_type = "Soil"
+
+[node name="Tile458" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4704, 735 )
+tile_type = "Soil"
+
+[node name="Tile459" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4640, 799 )
+tile_type = "Soil"
+
+[node name="Tile460" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4704, 799 )
+tile_type = "Soil"
+
+[node name="Tile461" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4640, 863 )
+tile_type = "Soil"
+
+[node name="Tile462" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4704, 863 )
+tile_type = "Soil"
+
+[node name="Tile463" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5024, 543 )
+
+[node name="Tile464" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5088, 543 )
+
+[node name="Tile465" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5024, 607 )
+tile_type = "Soil"
+
+[node name="Tile466" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5088, 607 )
+tile_type = "Soil"
+
+[node name="Tile467" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5024, 671 )
+tile_type = "Soil"
+
+[node name="Tile468" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5088, 671 )
+tile_type = "Soil"
+
+[node name="Tile469" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5024, 735 )
+tile_type = "Soil"
+
+[node name="Tile470" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5088, 735 )
+tile_type = "Soil"
+
+[node name="Tile471" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5024, 799 )
+tile_type = "Soil"
+
+[node name="Tile472" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5088, 799 )
+tile_type = "Soil"
+
+[node name="Tile473" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5024, 863 )
+tile_type = "Soil"
+
+[node name="Tile474" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5088, 863 )
+tile_type = "Soil"
+
+[node name="Tile475" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5152, 543 )
+
+[node name="Tile476" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5216, 543 )
+
+[node name="Tile477" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5280, 543 )
+
+[node name="Tile478" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5152, 607 )
+tile_type = "Soil"
+
+[node name="Tile479" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5216, 607 )
+tile_type = "Soil"
+
+[node name="Tile480" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5280, 607 )
+tile_type = "Soil"
+
+[node name="Tile481" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5152, 671 )
+tile_type = "Soil"
+
+[node name="Tile482" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5216, 671 )
+tile_type = "Soil"
+
+[node name="Tile483" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5280, 671 )
+tile_type = "Soil"
+
+[node name="Tile484" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5152, 735 )
+tile_type = "Soil"
+
+[node name="Tile485" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5216, 735 )
+tile_type = "Soil"
+
+[node name="Tile486" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5280, 735 )
+tile_type = "Soil"
+
+[node name="Tile487" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5152, 799 )
+tile_type = "Soil"
+
+[node name="Tile488" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5216, 799 )
+tile_type = "Soil"
+
+[node name="Tile489" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5280, 799 )
+tile_type = "Soil"
+
+[node name="Tile490" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5152, 863 )
+tile_type = "Soil"
+
+[node name="Tile491" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5216, 863 )
+tile_type = "Soil"
+
+[node name="Tile492" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5280, 863 )
+tile_type = "Soil"
+
+[node name="Tile493" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5344, 543 )
+
+[node name="Tile494" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5408, 543 )
+
+[node name="Tile495" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5344, 607 )
+tile_type = "Soil"
+
+[node name="Tile496" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5408, 607 )
+tile_type = "Soil"
+
+[node name="Tile497" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5344, 671 )
+tile_type = "Soil"
+
+[node name="Tile498" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5408, 671 )
+tile_type = "Soil"
+
+[node name="Tile499" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5344, 735 )
+tile_type = "Soil"
+
+[node name="Tile500" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5408, 735 )
+tile_type = "Soil"
+
+[node name="Tile501" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5344, 799 )
+tile_type = "Soil"
+
+[node name="Tile502" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5408, 799 )
+tile_type = "Soil"
+
+[node name="Tile503" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5344, 863 )
+tile_type = "Soil"
+
+[node name="Tile504" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5408, 863 )
+tile_type = "Soil"
+
+[node name="Tile505" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5472, 543 )
+
+[node name="Tile506" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5536, 543 )
+
+[node name="Tile507" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5472, 607 )
+tile_type = "Soil"
+
+[node name="Tile508" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5536, 607 )
+tile_type = "Soil"
+
+[node name="Tile509" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5472, 671 )
+tile_type = "Soil"
+
+[node name="Tile510" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5536, 671 )
+tile_type = "Soil"
+
+[node name="Tile511" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5472, 735 )
+tile_type = "Soil"
+
+[node name="Tile512" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5536, 735 )
+tile_type = "Soil"
+
+[node name="Tile513" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5472, 799 )
+tile_type = "Soil"
+
+[node name="Tile514" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5536, 799 )
+tile_type = "Soil"
+
+[node name="Tile515" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5472, 863 )
+tile_type = "Soil"
+
+[node name="Tile516" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5536, 863 )
+tile_type = "Soil"
+
+[node name="Tile517" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5600, 543 )
+
+[node name="Tile518" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5664, 543 )
+
+[node name="Tile519" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5728, 543 )
+
+[node name="Tile520" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5600, 607 )
+tile_type = "Soil"
+
+[node name="Tile521" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5664, 607 )
+tile_type = "Soil"
+
+[node name="Tile522" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5728, 607 )
+tile_type = "Soil"
+
+[node name="Tile523" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5600, 671 )
+tile_type = "Soil"
+
+[node name="Tile524" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5664, 671 )
+tile_type = "Soil"
+
+[node name="Tile525" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5728, 671 )
+tile_type = "Soil"
+
+[node name="Tile526" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5600, 735 )
+tile_type = "Soil"
+
+[node name="Tile527" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5664, 735 )
+tile_type = "Soil"
+
+[node name="Tile528" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5728, 735 )
+tile_type = "Soil"
+
+[node name="Tile529" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5600, 799 )
+tile_type = "Soil"
+
+[node name="Tile530" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5664, 799 )
+tile_type = "Soil"
+
+[node name="Tile531" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5728, 799 )
+tile_type = "Soil"
+
+[node name="Tile532" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5600, 863 )
+tile_type = "Soil"
+
+[node name="Tile533" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5664, 863 )
+tile_type = "Soil"
+
+[node name="Tile534" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5728, 863 )
+tile_type = "Soil"
+
+[node name="Tile535" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5792, 543 )
+
+[node name="Tile536" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5856, 543 )
+
+[node name="Tile537" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5792, 607 )
+tile_type = "Soil"
+
+[node name="Tile538" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5856, 607 )
+tile_type = "Soil"
+
+[node name="Tile539" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5792, 671 )
+tile_type = "Soil"
+
+[node name="Tile540" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5856, 671 )
+tile_type = "Soil"
+
+[node name="Tile541" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5792, 735 )
+tile_type = "Soil"
+
+[node name="Tile542" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5856, 735 )
+tile_type = "Soil"
+
+[node name="Tile543" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5792, 799 )
+tile_type = "Soil"
+
+[node name="Tile544" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5856, 799 )
+tile_type = "Soil"
+
+[node name="Tile545" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5792, 863 )
+tile_type = "Soil"
+
+[node name="Tile546" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5856, 863 )
+tile_type = "Soil"
+
+[node name="Tile547" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5920, 543 )
+
+[node name="Tile548" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5920, 607 )
+tile_type = "Soil"
+
+[node name="Tile549" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5920, 671 )
+tile_type = "Soil"
+
+[node name="Tile550" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5920, 735 )
+tile_type = "Soil"
+
+[node name="Tile551" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5920, 799 )
+tile_type = "Soil"
+
+[node name="Tile552" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5920, 863 )
+tile_type = "Soil"
+
+[node name="Tile553" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5984, 543 )
+
+[node name="Tile554" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6048, 543 )
+
+[node name="Tile555" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5984, 607 )
+tile_type = "Soil"
+
+[node name="Tile556" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6048, 607 )
+tile_type = "Soil"
+
+[node name="Tile557" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5984, 671 )
+tile_type = "Soil"
+
+[node name="Tile558" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6048, 671 )
+tile_type = "Soil"
+
+[node name="Tile559" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5984, 735 )
+tile_type = "Soil"
+
+[node name="Tile560" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6048, 735 )
+tile_type = "Soil"
+
+[node name="Tile561" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5984, 799 )
+tile_type = "Soil"
+
+[node name="Tile562" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6048, 799 )
+tile_type = "Soil"
+
+[node name="Tile563" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5984, 863 )
+tile_type = "Soil"
+
+[node name="Tile564" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6048, 863 )
+tile_type = "Soil"
+
+[node name="Tile565" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6112, 543 )
+
+[node name="Tile566" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6176, 543 )
+
+[node name="Tile567" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6240, 543 )
+
+[node name="Tile568" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6112, 607 )
+tile_type = "Soil"
+
+[node name="Tile569" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6176, 607 )
+tile_type = "Soil"
+
+[node name="Tile570" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6240, 607 )
+tile_type = "Soil"
+
+[node name="Tile571" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6112, 671 )
+tile_type = "Soil"
+
+[node name="Tile572" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6176, 671 )
+tile_type = "Soil"
+
+[node name="Tile573" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6240, 671 )
+tile_type = "Soil"
+
+[node name="Tile574" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6112, 735 )
+tile_type = "Soil"
+
+[node name="Tile575" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6176, 735 )
+tile_type = "Soil"
+
+[node name="Tile576" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6240, 735 )
+tile_type = "Soil"
+
+[node name="Tile577" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6112, 799 )
+tile_type = "Soil"
+
+[node name="Tile578" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6176, 799 )
+tile_type = "Soil"
+
+[node name="Tile579" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6240, 799 )
+tile_type = "Soil"
+
+[node name="Tile580" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6112, 863 )
+tile_type = "Soil"
+
+[node name="Tile581" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6176, 863 )
+tile_type = "Soil"
+
+[node name="Tile582" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6240, 863 )
+tile_type = "Soil"
+
+[node name="Tile583" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6304, 543 )
+
+[node name="Tile584" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6368, 543 )
+
+[node name="Tile585" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6304, 607 )
+tile_type = "Soil"
+
+[node name="Tile586" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6368, 607 )
+tile_type = "Soil"
+
+[node name="Tile587" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6304, 671 )
+tile_type = "Soil"
+
+[node name="Tile588" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6368, 671 )
+tile_type = "Soil"
+
+[node name="Tile589" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6304, 735 )
+tile_type = "Soil"
+
+[node name="Tile590" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6368, 735 )
+tile_type = "Soil"
+
+[node name="Tile591" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6304, 799 )
+tile_type = "Soil"
+
+[node name="Tile592" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6368, 799 )
+tile_type = "Soil"
+
+[node name="Tile593" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6304, 863 )
+tile_type = "Soil"
+
+[node name="Tile594" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6368, 863 )
+tile_type = "Soil"
+
+[node name="Tile595" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6432, 543 )
+
+[node name="Tile596" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6496, 543 )
+
+[node name="Tile597" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6432, 607 )
+tile_type = "Soil"
+
+[node name="Tile598" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6496, 607 )
+tile_type = "Soil"
+
+[node name="Tile599" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6432, 671 )
+tile_type = "Soil"
+
+[node name="Tile600" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6496, 671 )
+tile_type = "Soil"
+
+[node name="Tile601" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6432, 735 )
+tile_type = "Soil"
+
+[node name="Tile602" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6496, 735 )
+tile_type = "Soil"
+
+[node name="Tile603" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6432, 799 )
+tile_type = "Soil"
+
+[node name="Tile604" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6496, 799 )
+tile_type = "Soil"
+
+[node name="Tile605" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6432, 863 )
+tile_type = "Soil"
+
+[node name="Tile606" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6496, 863 )
+tile_type = "Soil"
+
+[node name="Tile607" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6560, 543 )
+
+[node name="Tile608" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6624, 543 )
+
+[node name="Tile609" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6560, 607 )
+tile_type = "Soil"
+
+[node name="Tile610" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6624, 607 )
+tile_type = "Soil"
+
+[node name="Tile611" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6560, 671 )
+tile_type = "Soil"
+
+[node name="Tile612" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6624, 671 )
+tile_type = "Soil"
+
+[node name="Tile613" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6560, 735 )
+tile_type = "Soil"
+
+[node name="Tile614" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6624, 735 )
+tile_type = "Soil"
+
+[node name="Tile615" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6560, 799 )
+tile_type = "Soil"
+
+[node name="Tile616" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6624, 799 )
+tile_type = "Soil"
+
+[node name="Tile617" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6560, 863 )
+tile_type = "Soil"
+
+[node name="Tile618" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6624, 863 )
+tile_type = "Soil"
+
+[node name="Tile619" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6688, 543 )
+
+[node name="Tile620" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6752, 543 )
+
+[node name="Tile621" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6816, 543 )
+
+[node name="Tile622" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6688, 607 )
+tile_type = "Soil"
+
+[node name="Tile623" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6752, 607 )
+tile_type = "Soil"
+
+[node name="Tile624" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6816, 607 )
+tile_type = "Soil"
+
+[node name="Tile625" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6688, 671 )
+tile_type = "Soil"
+
+[node name="Tile626" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6752, 671 )
+tile_type = "Soil"
+
+[node name="Tile627" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6816, 671 )
+tile_type = "Soil"
+
+[node name="Tile628" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6688, 735 )
+tile_type = "Soil"
+
+[node name="Tile629" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6752, 735 )
+tile_type = "Soil"
+
+[node name="Tile630" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6816, 735 )
+tile_type = "Soil"
+
+[node name="Tile631" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6688, 799 )
+tile_type = "Soil"
+
+[node name="Tile632" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6752, 799 )
+tile_type = "Soil"
+
+[node name="Tile633" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6816, 799 )
+tile_type = "Soil"
+
+[node name="Tile634" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6688, 863 )
+tile_type = "Soil"
+
+[node name="Tile635" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6752, 863 )
+tile_type = "Soil"
+
+[node name="Tile636" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6816, 863 )
+tile_type = "Soil"
+
+[node name="Tile637" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6880, 543 )
+
+[node name="Tile638" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6944, 543 )
+
+[node name="Tile639" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6880, 607 )
+tile_type = "Soil"
+
+[node name="Tile640" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6944, 607 )
+tile_type = "Soil"
+
+[node name="Tile641" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6880, 671 )
+tile_type = "Soil"
+
+[node name="Tile642" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6944, 671 )
+tile_type = "Soil"
+
+[node name="Tile643" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6880, 735 )
+tile_type = "Soil"
+
+[node name="Tile644" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6944, 735 )
+tile_type = "Soil"
+
+[node name="Tile645" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6880, 799 )
+tile_type = "Soil"
+
+[node name="Tile646" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6944, 799 )
+tile_type = "Soil"
+
+[node name="Tile647" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6880, 863 )
+tile_type = "Soil"
+
+[node name="Tile648" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6944, 863 )
+tile_type = "Soil"
+
+[node name="Tile649" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7008, 543 )
+
+[node name="Tile650" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7008, 607 )
+tile_type = "Soil"
+
+[node name="Tile651" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7008, 671 )
+tile_type = "Soil"
+
+[node name="Tile652" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7008, 735 )
+tile_type = "Soil"
+
+[node name="Tile653" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7008, 799 )
+tile_type = "Soil"
+
+[node name="Tile654" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7008, 863 )
+tile_type = "Soil"
+
+[node name="Tile655" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7072, 543 )
+
+[node name="Tile656" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7136, 543 )
+
+[node name="Tile657" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7072, 607 )
+tile_type = "Soil"
+
+[node name="Tile658" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7136, 607 )
+tile_type = "Soil"
+
+[node name="Tile659" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7072, 671 )
+tile_type = "Soil"
+
+[node name="Tile660" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7136, 671 )
+tile_type = "Soil"
+
+[node name="Tile661" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7072, 735 )
+tile_type = "Soil"
+
+[node name="Tile662" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7136, 735 )
+tile_type = "Soil"
+
+[node name="Tile663" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7072, 799 )
+tile_type = "Soil"
+
+[node name="Tile664" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7136, 799 )
+tile_type = "Soil"
+
+[node name="Tile665" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7072, 863 )
+tile_type = "Soil"
+
+[node name="Tile666" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7136, 863 )
+tile_type = "Soil"
+
+[node name="Tile667" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7200, 543 )
+
+[node name="Tile668" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7264, 543 )
+
+[node name="Tile669" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7328, 543 )
+
+[node name="Tile670" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7200, 607 )
+tile_type = "Soil"
+
+[node name="Tile671" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7264, 607 )
+tile_type = "Soil"
+
+[node name="Tile672" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7328, 607 )
+tile_type = "Soil"
+
+[node name="Tile673" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7200, 671 )
+tile_type = "Soil"
+
+[node name="Tile674" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7264, 671 )
+tile_type = "Soil"
+
+[node name="Tile675" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7328, 671 )
+tile_type = "Soil"
+
+[node name="Tile676" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7200, 735 )
+tile_type = "Soil"
+
+[node name="Tile677" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7264, 735 )
+tile_type = "Soil"
+
+[node name="Tile678" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7328, 735 )
+tile_type = "Soil"
+
+[node name="Tile679" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7200, 799 )
+tile_type = "Soil"
+
+[node name="Tile680" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7264, 799 )
+tile_type = "Soil"
+
+[node name="Tile681" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7328, 799 )
+tile_type = "Soil"
+
+[node name="Tile682" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7200, 863 )
+tile_type = "Soil"
+
+[node name="Tile683" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7264, 863 )
+tile_type = "Soil"
+
+[node name="Tile684" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7328, 863 )
+tile_type = "Soil"
+
+[node name="Tile685" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7392, 543 )
+
+[node name="Tile686" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7456, 543 )
+
+[node name="Tile687" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7392, 607 )
+tile_type = "Soil"
+
+[node name="Tile688" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7456, 607 )
+tile_type = "Soil"
+
+[node name="Tile689" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7392, 671 )
+tile_type = "Soil"
+
+[node name="Tile690" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7456, 671 )
+tile_type = "Soil"
+
+[node name="Tile691" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7392, 735 )
+tile_type = "Soil"
+
+[node name="Tile692" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7456, 735 )
+tile_type = "Soil"
+
+[node name="Tile693" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7392, 799 )
+tile_type = "Soil"
+
+[node name="Tile694" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7456, 799 )
+tile_type = "Soil"
+
+[node name="Tile695" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7392, 863 )
+tile_type = "Soil"
+
+[node name="Tile696" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7456, 863 )
+tile_type = "Soil"
+
+[node name="Tile697" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7520, 543 )
+
+[node name="Tile698" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7520, 607 )
+tile_type = "Soil"
+
+[node name="Tile699" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7520, 671 )
+tile_type = "Soil"
+
+[node name="Tile700" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7520, 735 )
+tile_type = "Soil"
+
+[node name="Tile701" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7520, 799 )
+tile_type = "Soil"
+
+[node name="Tile702" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7520, 863 )
+tile_type = "Soil"
+
+[node name="Tile703" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7584, 543 )
+
+[node name="Tile704" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7648, 543 )
+
+[node name="Tile705" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7712, 543 )
+
+[node name="Tile706" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7584, 607 )
+tile_type = "Soil"
+
+[node name="Tile707" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7648, 607 )
+tile_type = "Soil"
+
+[node name="Tile708" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7712, 607 )
+tile_type = "Soil"
+
+[node name="Tile709" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7584, 671 )
+tile_type = "Soil"
+
+[node name="Tile710" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7648, 671 )
+tile_type = "Soil"
+
+[node name="Tile711" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7712, 671 )
+tile_type = "Soil"
+
+[node name="Tile712" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7584, 735 )
+tile_type = "Soil"
+
+[node name="Tile713" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7648, 735 )
+tile_type = "Soil"
+
+[node name="Tile714" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7712, 735 )
+tile_type = "Soil"
+
+[node name="Tile715" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7584, 799 )
+tile_type = "Soil"
+
+[node name="Tile716" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7648, 799 )
+tile_type = "Soil"
+
+[node name="Tile717" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7712, 799 )
+tile_type = "Soil"
+
+[node name="Tile718" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7584, 863 )
+tile_type = "Soil"
+
+[node name="Tile719" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7648, 863 )
+tile_type = "Soil"
+
+[node name="Tile720" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7712, 863 )
+tile_type = "Soil"
+
+[node name="Tile721" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7776, 543 )
+
+[node name="Tile722" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7840, 543 )
+
+[node name="Tile723" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7776, 607 )
+tile_type = "Soil"
+
+[node name="Tile724" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7840, 607 )
+tile_type = "Soil"
+
+[node name="Tile725" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7776, 671 )
+tile_type = "Soil"
+
+[node name="Tile726" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7840, 671 )
+tile_type = "Soil"
+
+[node name="Tile727" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7776, 735 )
+tile_type = "Soil"
+
+[node name="Tile728" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7840, 735 )
+tile_type = "Soil"
+
+[node name="Tile729" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7776, 799 )
+tile_type = "Soil"
+
+[node name="Tile730" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7840, 799 )
+tile_type = "Soil"
+
+[node name="Tile731" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7776, 863 )
+tile_type = "Soil"
+
+[node name="Tile732" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7840, 863 )
+tile_type = "Soil"
+
+[node name="Tile733" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7904, 543 )
+
+[node name="Tile734" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7904, 607 )
+tile_type = "Soil"
+
+[node name="Tile735" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7904, 671 )
+tile_type = "Soil"
+
+[node name="Tile736" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7904, 735 )
+tile_type = "Soil"
+
+[node name="Tile737" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7904, 799 )
+tile_type = "Soil"
+
+[node name="Tile738" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7904, 863 )
+tile_type = "Soil"
+
+[node name="Tile739" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7968, 543 )
+
+[node name="Tile740" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8032, 543 )
+
+[node name="Tile741" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7968, 607 )
+tile_type = "Soil"
+
+[node name="Tile742" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8032, 607 )
+tile_type = "Soil"
+
+[node name="Tile743" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7968, 671 )
+tile_type = "Soil"
+
+[node name="Tile744" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8032, 671 )
+tile_type = "Soil"
+
+[node name="Tile745" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7968, 735 )
+tile_type = "Soil"
+
+[node name="Tile746" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8032, 735 )
+tile_type = "Soil"
+
+[node name="Tile747" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7968, 799 )
+tile_type = "Soil"
+
+[node name="Tile748" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8032, 799 )
+tile_type = "Soil"
+
+[node name="Tile749" parent="." instance=ExtResource( 8 )]
+position = Vector2( 7968, 863 )
+tile_type = "Soil"
+
+[node name="Tile750" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8032, 863 )
+tile_type = "Soil"
+
+[node name="Tile751" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8096, 543 )
+
+[node name="Tile752" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8160, 543 )
+
+[node name="Tile753" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8224, 543 )
+
+[node name="Tile754" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8096, 607 )
+tile_type = "Soil"
+
+[node name="Tile755" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8160, 607 )
+tile_type = "Soil"
+
+[node name="Tile756" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8224, 607 )
+tile_type = "Soil"
+
+[node name="Tile757" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8096, 671 )
+tile_type = "Soil"
+
+[node name="Tile758" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8160, 671 )
+tile_type = "Soil"
+
+[node name="Tile759" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8224, 671 )
+tile_type = "Soil"
+
+[node name="Tile760" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8096, 735 )
+tile_type = "Soil"
+
+[node name="Tile761" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8160, 735 )
+tile_type = "Soil"
+
+[node name="Tile762" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8224, 735 )
+tile_type = "Soil"
+
+[node name="Tile763" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8096, 799 )
+tile_type = "Soil"
+
+[node name="Tile764" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8160, 799 )
+tile_type = "Soil"
+
+[node name="Tile765" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8224, 799 )
+tile_type = "Soil"
+
+[node name="Tile766" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8096, 863 )
+tile_type = "Soil"
+
+[node name="Tile767" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8160, 863 )
+tile_type = "Soil"
+
+[node name="Tile768" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8224, 863 )
+tile_type = "Soil"
+
+[node name="Tile769" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8288, 543 )
+
+[node name="Tile770" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8352, 543 )
+
+[node name="Tile771" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8288, 607 )
+tile_type = "Soil"
+
+[node name="Tile772" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8352, 607 )
+tile_type = "Soil"
+
+[node name="Tile773" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8288, 671 )
+tile_type = "Soil"
+
+[node name="Tile774" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8352, 671 )
+tile_type = "Soil"
+
+[node name="Tile775" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8288, 735 )
+tile_type = "Soil"
+
+[node name="Tile776" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8352, 735 )
+tile_type = "Soil"
+
+[node name="Tile777" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8288, 799 )
+tile_type = "Soil"
+
+[node name="Tile778" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8352, 799 )
+tile_type = "Soil"
+
+[node name="Tile779" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8288, 863 )
+tile_type = "Soil"
+
+[node name="Tile780" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8352, 863 )
+tile_type = "Soil"
+
+[node name="Tile781" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8416, 543 )
+
+[node name="Tile782" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8480, 543 )
+
+[node name="Tile783" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8416, 607 )
+tile_type = "Soil"
+
+[node name="Tile784" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8480, 607 )
+tile_type = "Soil"
+
+[node name="Tile785" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8416, 671 )
+tile_type = "Soil"
+
+[node name="Tile786" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8480, 671 )
+tile_type = "Soil"
+
+[node name="Tile787" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8416, 735 )
+tile_type = "Soil"
+
+[node name="Tile788" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8480, 735 )
+tile_type = "Soil"
+
+[node name="Tile789" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8416, 799 )
+tile_type = "Soil"
+
+[node name="Tile790" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8480, 799 )
+tile_type = "Soil"
+
+[node name="Tile791" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8416, 863 )
+tile_type = "Soil"
+
+[node name="Tile792" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8480, 863 )
+tile_type = "Soil"
+
+[node name="Tile793" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8544, 543 )
+
+[node name="Tile794" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8608, 543 )
+
+[node name="Tile795" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8544, 607 )
+tile_type = "Soil"
+
+[node name="Tile796" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8608, 607 )
+tile_type = "Soil"
+
+[node name="Tile797" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8544, 671 )
+tile_type = "Soil"
+
+[node name="Tile798" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8608, 671 )
+tile_type = "Soil"
+
+[node name="Tile799" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8544, 735 )
+tile_type = "Soil"
+
+[node name="Tile800" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8608, 735 )
+tile_type = "Soil"
+
+[node name="Tile801" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8544, 799 )
+tile_type = "Soil"
+
+[node name="Tile802" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8608, 799 )
+tile_type = "Soil"
+
+[node name="Tile803" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8544, 863 )
+tile_type = "Soil"
+
+[node name="Tile804" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8608, 863 )
+tile_type = "Soil"
+
+[node name="Tile805" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8672, 543 )
+
+[node name="Tile806" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8736, 543 )
+
+[node name="Tile807" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8800, 543 )
+
+[node name="Tile808" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8672, 607 )
+tile_type = "Soil"
+
+[node name="Tile809" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8736, 607 )
+tile_type = "Soil"
+
+[node name="Tile810" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8800, 607 )
+tile_type = "Soil"
+
+[node name="Tile811" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8672, 671 )
+tile_type = "Soil"
+
+[node name="Tile812" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8736, 671 )
+tile_type = "Soil"
+
+[node name="Tile813" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8800, 671 )
+tile_type = "Soil"
+
+[node name="Tile814" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8672, 735 )
+tile_type = "Soil"
+
+[node name="Tile815" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8736, 735 )
+tile_type = "Soil"
+
+[node name="Tile816" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8800, 735 )
+tile_type = "Soil"
+
+[node name="Tile817" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8672, 799 )
+tile_type = "Soil"
+
+[node name="Tile818" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8736, 799 )
+tile_type = "Soil"
+
+[node name="Tile819" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8800, 799 )
+tile_type = "Soil"
+
+[node name="Tile820" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8672, 863 )
+tile_type = "Soil"
+
+[node name="Tile821" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8736, 863 )
+tile_type = "Soil"
+
+[node name="Tile822" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8800, 863 )
+tile_type = "Soil"
+
+[node name="Tile823" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8864, 543 )
+
+[node name="Tile824" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8928, 543 )
+
+[node name="Tile825" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8864, 607 )
+tile_type = "Soil"
+
+[node name="Tile826" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8928, 607 )
+tile_type = "Soil"
+
+[node name="Tile827" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8864, 671 )
+tile_type = "Soil"
+
+[node name="Tile828" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8928, 671 )
+tile_type = "Soil"
+
+[node name="Tile829" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8864, 735 )
+tile_type = "Soil"
+
+[node name="Tile830" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8928, 735 )
+tile_type = "Soil"
+
+[node name="Tile831" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8864, 799 )
+tile_type = "Soil"
+
+[node name="Tile832" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8928, 799 )
+tile_type = "Soil"
+
+[node name="Tile833" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8864, 863 )
+tile_type = "Soil"
+
+[node name="Tile834" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8928, 863 )
+tile_type = "Soil"
+
+[node name="Tile835" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8992, 543 )
+
+[node name="Tile836" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8992, 607 )
+tile_type = "Soil"
+
+[node name="Tile837" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8992, 671 )
+tile_type = "Soil"
+
+[node name="Tile838" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8992, 735 )
+tile_type = "Soil"
+
+[node name="Tile839" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8992, 799 )
+tile_type = "Soil"
+
+[node name="Tile840" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8992, 863 )
+tile_type = "Soil"
+
+[node name="Tile883" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8608, 479 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile889" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8736, 351 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile890" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8672, 415 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile891" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8736, 415 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile892" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8672, 479 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile893" parent="." instance=ExtResource( 8 )]
+position = Vector2( 8736, 479 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile841" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9056, 543 )
+
+[node name="Tile842" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9120, 543 )
+
+[node name="Tile843" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9056, 607 )
+tile_type = "Soil"
+
+[node name="Tile844" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9120, 607 )
+tile_type = "Soil"
+
+[node name="Tile845" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9056, 671 )
+tile_type = "Soil"
+
+[node name="Tile846" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9120, 671 )
+tile_type = "Soil"
+
+[node name="Tile847" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9056, 735 )
+tile_type = "Soil"
+
+[node name="Tile848" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9120, 735 )
+tile_type = "Soil"
+
+[node name="Tile849" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9056, 799 )
+tile_type = "Soil"
+
+[node name="Tile850" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9120, 799 )
+tile_type = "Soil"
+
+[node name="Tile851" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9056, 863 )
+tile_type = "Soil"
+
+[node name="Tile852" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9120, 863 )
+tile_type = "Soil"
+
+[node name="Tile853" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9184, 543 )
+
+[node name="Tile854" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9248, 543 )
+
+[node name="Tile855" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9312, 543 )
+
+[node name="Tile856" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9184, 607 )
+tile_type = "Soil"
+
+[node name="Tile857" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9248, 607 )
+tile_type = "Soil"
+
+[node name="Tile858" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9312, 607 )
+tile_type = "Soil"
+
+[node name="Tile859" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9184, 671 )
+tile_type = "Soil"
+
+[node name="Tile860" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9248, 671 )
+tile_type = "Soil"
+
+[node name="Tile861" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9312, 671 )
+tile_type = "Soil"
+
+[node name="Tile862" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9184, 735 )
+tile_type = "Soil"
+
+[node name="Tile863" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9248, 735 )
+tile_type = "Soil"
+
+[node name="Tile864" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9312, 735 )
+tile_type = "Soil"
+
+[node name="Tile865" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9184, 799 )
+tile_type = "Soil"
+
+[node name="Tile866" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9248, 799 )
+tile_type = "Soil"
+
+[node name="Tile867" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9312, 799 )
+tile_type = "Soil"
+
+[node name="Tile868" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9184, 863 )
+tile_type = "Soil"
+
+[node name="Tile869" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9248, 863 )
+tile_type = "Soil"
+
+[node name="Tile870" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9312, 863 )
+tile_type = "Soil"
+
+[node name="Tile871" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9376, 543 )
+
+[node name="Tile872" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9440, 543 )
+
+[node name="Tile873" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9376, 607 )
+tile_type = "Soil"
+
+[node name="Tile874" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9440, 607 )
+tile_type = "Soil"
+
+[node name="Tile875" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9376, 671 )
+tile_type = "Soil"
+
+[node name="Tile876" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9440, 671 )
+tile_type = "Soil"
+
+[node name="Tile877" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9376, 735 )
+tile_type = "Soil"
+
+[node name="Tile878" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9440, 735 )
+tile_type = "Soil"
+
+[node name="Tile886" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9184, 351 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile888" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9184, 415 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile895" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9184, 479 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile896" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9248, 415 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile897" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9248, 479 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile902" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9312, 479 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile879" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9376, 799 )
+tile_type = "Soil"
+
+[node name="Tile880" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9440, 799 )
+tile_type = "Soil"
+
+[node name="Tile881" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9376, 863 )
+tile_type = "Soil"
+
+[node name="Tile882" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9440, 863 )
+tile_type = "Soil"
+
+[node name="Tile903" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9504, 543 )
+
+[node name="Tile904" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9504, 607 )
+tile_type = "Soil"
+
+[node name="Tile905" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9504, 671 )
+tile_type = "Soil"
+
+[node name="Tile906" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9504, 735 )
+tile_type = "Soil"
+
+[node name="Tile907" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9504, 799 )
+tile_type = "Soil"
+
+[node name="Tile908" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9504, 863 )
+tile_type = "Soil"
+
+[node name="Tile909" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9568, 543 )
+
+[node name="Tile910" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9632, 543 )
+
+[node name="Tile911" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9568, 607 )
+tile_type = "Soil"
+
+[node name="Tile912" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9632, 607 )
+tile_type = "Soil"
+
+[node name="Tile913" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9568, 671 )
+tile_type = "Soil"
+
+[node name="Tile914" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9632, 671 )
+tile_type = "Soil"
+
+[node name="Tile915" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9568, 735 )
+tile_type = "Soil"
+
+[node name="Tile916" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9632, 735 )
+tile_type = "Soil"
+
+[node name="Tile917" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9568, 799 )
+tile_type = "Soil"
+
+[node name="Tile918" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9632, 799 )
+tile_type = "Soil"
+
+[node name="Tile919" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9568, 863 )
+tile_type = "Soil"
+
+[node name="Tile920" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9632, 863 )
+tile_type = "Soil"
+
+[node name="Tile921" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9696, 543 )
+
+[node name="Tile922" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9760, 543 )
+
+[node name="Tile923" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9824, 415 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile924" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9696, 607 )
+tile_type = "Soil"
+
+[node name="Tile925" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9760, 607 )
+tile_type = "Soil"
+
+[node name="Tile926" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9824, 479 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile927" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9696, 671 )
+tile_type = "Soil"
+
+[node name="Tile928" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9760, 671 )
+tile_type = "Soil"
+
+[node name="Tile929" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9824, 543 )
+
+[node name="Tile930" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9696, 735 )
+tile_type = "Soil"
+
+[node name="Tile931" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9760, 735 )
+tile_type = "Soil"
+
+[node name="Tile932" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9824, 607 )
+tile_type = "Soil"
+
+[node name="Tile933" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9696, 799 )
+tile_type = "Soil"
+
+[node name="Tile934" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9760, 799 )
+tile_type = "Soil"
+
+[node name="Tile935" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9824, 671 )
+tile_type = "Soil"
+
+[node name="Tile936" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9696, 863 )
+tile_type = "Soil"
+
+[node name="Tile937" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9760, 863 )
+tile_type = "Soil"
+
+[node name="Tile884" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10016, 543 )
+
+[node name="Tile885" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10080, 543 )
+
+[node name="Tile887" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10016, 607 )
+tile_type = "Soil"
+
+[node name="Tile894" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10080, 607 )
+tile_type = "Soil"
+
+[node name="Tile898" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10016, 671 )
+tile_type = "Soil"
+
+[node name="Tile899" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10080, 671 )
+tile_type = "Soil"
+
+[node name="Tile900" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10016, 735 )
+tile_type = "Soil"
+
+[node name="Tile901" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10080, 735 )
+tile_type = "Soil"
+
+[node name="Tile957" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10016, 799 )
+tile_type = "Soil"
+
+[node name="Tile958" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10080, 799 )
+tile_type = "Soil"
+
+[node name="Tile959" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10016, 863 )
+tile_type = "Soil"
+
+[node name="Tile960" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10080, 863 )
+tile_type = "Soil"
+
+[node name="Tile961" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10144, 543 )
+
+[node name="Tile962" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10144, 607 )
+tile_type = "Soil"
+
+[node name="Tile963" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10144, 671 )
+tile_type = "Soil"
+
+[node name="Tile964" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10144, 735 )
+tile_type = "Soil"
+
+[node name="Tile965" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10144, 799 )
+tile_type = "Soil"
+
+[node name="Tile966" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10144, 863 )
+tile_type = "Soil"
+
+[node name="Tile967" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10208, 543 )
+
+[node name="Tile968" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10272, 543 )
+
+[node name="Tile969" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10208, 607 )
+tile_type = "Soil"
+
+[node name="Tile970" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10272, 607 )
+tile_type = "Soil"
+
+[node name="Tile971" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10208, 671 )
+tile_type = "Soil"
+
+[node name="Tile972" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10272, 671 )
+tile_type = "Soil"
+
+[node name="Tile973" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10208, 735 )
+tile_type = "Soil"
+
+[node name="Tile974" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10272, 735 )
+tile_type = "Soil"
+
+[node name="Tile975" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10208, 799 )
+tile_type = "Soil"
+
+[node name="Tile976" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10272, 799 )
+tile_type = "Soil"
+
+[node name="Tile977" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10208, 863 )
+tile_type = "Soil"
+
+[node name="Tile978" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10272, 863 )
+tile_type = "Soil"
+
+[node name="Tile979" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10336, 543 )
+
+[node name="Tile980" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10400, 543 )
+
+[node name="Tile981" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10336, 607 )
+tile_type = "Soil"
+
+[node name="Tile982" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10400, 607 )
+tile_type = "Soil"
+
+[node name="Tile983" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10336, 671 )
+tile_type = "Soil"
+
+[node name="Tile984" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10400, 671 )
+tile_type = "Soil"
+
+[node name="Tile985" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10336, 735 )
+tile_type = "Soil"
+
+[node name="Tile986" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10400, 735 )
+tile_type = "Soil"
+
+[node name="Tile987" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10336, 799 )
+tile_type = "Soil"
+
+[node name="Tile988" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10400, 799 )
+tile_type = "Soil"
+
+[node name="Tile989" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10336, 863 )
+tile_type = "Soil"
+
+[node name="Tile990" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10400, 863 )
+tile_type = "Soil"
+
+[node name="Tile991" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10464, 543 )
+
+[node name="Tile992" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10528, 543 )
+
+[node name="Tile993" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10464, 607 )
+tile_type = "Soil"
+
+[node name="Tile994" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10528, 607 )
+tile_type = "Soil"
+
+[node name="Tile995" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10464, 671 )
+tile_type = "Soil"
+
+[node name="Tile996" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10528, 671 )
+tile_type = "Soil"
+
+[node name="Tile997" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10464, 735 )
+tile_type = "Soil"
+
+[node name="Tile998" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10528, 735 )
+tile_type = "Soil"
+
+[node name="Tile999" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10464, 799 )
+tile_type = "Soil"
+
+[node name="Tile1000" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10528, 799 )
+tile_type = "Soil"
+
+[node name="Tile1001" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10464, 863 )
+tile_type = "Soil"
+
+[node name="Tile1002" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10528, 863 )
+tile_type = "Soil"
+
+[node name="Tile1003" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10592, 543 )
+
+[node name="Tile1004" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10592, 607 )
+tile_type = "Soil"
+
+[node name="Tile1005" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10592, 671 )
+tile_type = "Soil"
+
+[node name="Tile1006" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10592, 735 )
+tile_type = "Soil"
+
+[node name="Tile1007" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10592, 799 )
+tile_type = "Soil"
+
+[node name="Tile1008" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10592, 863 )
+tile_type = "Soil"
+
+[node name="Tile1009" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10656, 543 )
+
+[node name="Tile1010" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10720, 543 )
+
+[node name="Tile1011" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10656, 607 )
+tile_type = "Soil"
+
+[node name="Tile1012" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10720, 607 )
+tile_type = "Soil"
+
+[node name="Tile1013" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10656, 671 )
+tile_type = "Soil"
+
+[node name="Tile1014" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10720, 671 )
+tile_type = "Soil"
+
+[node name="Tile1015" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10656, 735 )
+tile_type = "Soil"
+
+[node name="Tile1016" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10720, 735 )
+tile_type = "Soil"
+
+[node name="Tile1017" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10656, 799 )
+tile_type = "Soil"
+
+[node name="Tile1018" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10720, 799 )
+tile_type = "Soil"
+
+[node name="Tile1019" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10656, 863 )
+tile_type = "Soil"
+
+[node name="Tile1020" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10720, 863 )
+tile_type = "Soil"
+
+[node name="Tile1021" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10784, 543 )
+
+[node name="Tile1022" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10848, 543 )
+
+[node name="Tile1023" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10784, 607 )
+tile_type = "Soil"
+
+[node name="Tile1024" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10848, 607 )
+tile_type = "Soil"
+
+[node name="Tile1025" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10784, 671 )
+tile_type = "Soil"
+
+[node name="Tile1026" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10848, 671 )
+tile_type = "Soil"
+
+[node name="Tile1027" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10784, 735 )
+tile_type = "Soil"
+
+[node name="Tile1028" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10848, 735 )
+tile_type = "Soil"
+
+[node name="Tile1029" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10784, 799 )
+tile_type = "Soil"
+
+[node name="Tile1030" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10848, 799 )
+tile_type = "Soil"
+
+[node name="Tile1031" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10784, 863 )
+tile_type = "Soil"
+
+[node name="Tile1032" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10848, 863 )
+tile_type = "Soil"
+
+[node name="Tile1103" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11360, 543 )
+
+[node name="Tile1104" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11424, 543 )
+
+[node name="Tile1105" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11360, 607 )
+tile_type = "Soil"
+
+[node name="Tile1106" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11424, 607 )
+tile_type = "Soil"
+
+[node name="Tile1107" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11360, 671 )
+tile_type = "Soil"
+
+[node name="Tile1108" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11424, 671 )
+tile_type = "Soil"
+
+[node name="Tile1109" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11360, 735 )
+tile_type = "Soil"
+
+[node name="Tile1110" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11424, 735 )
+tile_type = "Soil"
+
+[node name="Tile1111" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11360, 799 )
+tile_type = "Soil"
+
+[node name="Tile1112" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11424, 799 )
+tile_type = "Soil"
+
+[node name="Tile1113" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11360, 863 )
+tile_type = "Soil"
+
+[node name="Tile1114" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11424, 863 )
+tile_type = "Soil"
+
+[node name="Tile1115" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11488, 543 )
+
+[node name="Tile1116" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11488, 607 )
+tile_type = "Soil"
+
+[node name="Tile1117" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11488, 671 )
+tile_type = "Soil"
+
+[node name="Tile1118" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11488, 735 )
+tile_type = "Soil"
+
+[node name="Tile1119" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11488, 799 )
+tile_type = "Soil"
+
+[node name="Tile1120" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11488, 863 )
+tile_type = "Soil"
+
+[node name="Tile1121" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11552, 543 )
+
+[node name="Tile1122" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11616, 543 )
+
+[node name="Tile1123" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11552, 607 )
+tile_type = "Soil"
+
+[node name="Tile1124" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11616, 607 )
+tile_type = "Soil"
+
+[node name="Tile1125" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11552, 671 )
+tile_type = "Soil"
+
+[node name="Tile1126" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11616, 671 )
+tile_type = "Soil"
+
+[node name="Tile1127" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11552, 735 )
+tile_type = "Soil"
+
+[node name="Tile1128" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11616, 735 )
+tile_type = "Soil"
+
+[node name="Tile1129" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11552, 799 )
+tile_type = "Soil"
+
+[node name="Tile1130" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11616, 799 )
+tile_type = "Soil"
+
+[node name="Tile1131" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11552, 863 )
+tile_type = "Soil"
+
+[node name="Tile1132" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11616, 863 )
+tile_type = "Soil"
+
+[node name="Tile1133" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11680, 543 )
+
+[node name="Tile1134" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11744, 543 )
+
+[node name="Tile1135" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11680, 607 )
+tile_type = "Soil"
+
+[node name="Tile1136" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11744, 607 )
+tile_type = "Soil"
+
+[node name="Tile1137" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11680, 671 )
+tile_type = "Soil"
+
+[node name="Tile1138" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11744, 671 )
+tile_type = "Soil"
+
+[node name="Tile1139" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11680, 735 )
+tile_type = "Soil"
+
+[node name="Tile1140" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11744, 735 )
+tile_type = "Soil"
+
+[node name="Tile1141" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11680, 799 )
+tile_type = "Soil"
+
+[node name="Tile1142" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11744, 799 )
+tile_type = "Soil"
+
+[node name="Tile1143" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11680, 863 )
+tile_type = "Soil"
+
+[node name="Tile1144" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11744, 863 )
+tile_type = "Soil"
+
+[node name="Tile1145" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11808, 543 )
+
+[node name="Tile1146" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11872, 543 )
+
+[node name="Tile1147" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11808, 607 )
+tile_type = "Soil"
+
+[node name="Tile1148" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11872, 607 )
+tile_type = "Soil"
+
+[node name="Tile1149" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11808, 671 )
+tile_type = "Soil"
+
+[node name="Tile1150" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11872, 671 )
+tile_type = "Soil"
+
+[node name="Tile1151" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11808, 735 )
+tile_type = "Soil"
+
+[node name="Tile1152" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11872, 735 )
+tile_type = "Soil"
+
+[node name="Tile1153" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11808, 799 )
+tile_type = "Soil"
+
+[node name="Tile1154" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11872, 799 )
+tile_type = "Soil"
+
+[node name="Tile1155" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11808, 863 )
+tile_type = "Soil"
+
+[node name="Tile1156" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11872, 863 )
+tile_type = "Soil"
+
+[node name="Tile1157" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11936, 543 )
+
+[node name="Tile1158" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11936, 607 )
+tile_type = "Soil"
+
+[node name="Tile1159" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11936, 671 )
+tile_type = "Soil"
+
+[node name="Tile1160" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11936, 735 )
+tile_type = "Soil"
+
+[node name="Tile1161" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11936, 799 )
+tile_type = "Soil"
+
+[node name="Tile1162" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11936, 863 )
+tile_type = "Soil"
+
+[node name="Tile1163" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12000, 543 )
+
+[node name="Tile1164" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12064, 543 )
+
+[node name="Tile1165" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12000, 607 )
+tile_type = "Soil"
+
+[node name="Tile1166" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12064, 607 )
+tile_type = "Soil"
+
+[node name="Tile1167" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12000, 671 )
+tile_type = "Soil"
+
+[node name="Tile1168" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12064, 671 )
+tile_type = "Soil"
+
+[node name="Tile1169" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12000, 735 )
+tile_type = "Soil"
+
+[node name="Tile1170" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12064, 735 )
+tile_type = "Soil"
+
+[node name="Tile1171" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12000, 799 )
+tile_type = "Soil"
+
+[node name="Tile1172" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12064, 799 )
+tile_type = "Soil"
+
+[node name="Tile1173" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12000, 863 )
+tile_type = "Soil"
+
+[node name="Tile1174" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12064, 863 )
+tile_type = "Soil"
+
+[node name="Tile1175" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12128, 543 )
+
+[node name="Tile1176" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12192, 543 )
+
+[node name="Tile1177" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12128, 607 )
+tile_type = "Soil"
+
+[node name="Tile1178" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12192, 607 )
+tile_type = "Soil"
+
+[node name="Tile1179" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12128, 671 )
+tile_type = "Soil"
+
+[node name="Tile1180" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12192, 671 )
+tile_type = "Soil"
+
+[node name="Tile1181" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12128, 735 )
+tile_type = "Soil"
+
+[node name="Tile1182" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12192, 735 )
+tile_type = "Soil"
+
+[node name="Tile1183" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12128, 799 )
+tile_type = "Soil"
+
+[node name="Tile1184" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12192, 799 )
+tile_type = "Soil"
+
+[node name="Tile1185" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12128, 863 )
+tile_type = "Soil"
+
+[node name="Tile1186" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12192, 863 )
+tile_type = "Soil"
+
+[node name="Tile1187" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12256, 543 )
+
+[node name="Tile1188" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12320, 543 )
+
+[node name="Tile1189" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12256, 607 )
+tile_type = "Soil"
+
+[node name="Tile1190" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12320, 607 )
+tile_type = "Soil"
+
+[node name="Tile1191" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12256, 671 )
+tile_type = "Soil"
+
+[node name="Tile1192" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12320, 671 )
+tile_type = "Soil"
+
+[node name="Tile1193" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12256, 735 )
+tile_type = "Soil"
+
+[node name="Tile1194" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12320, 735 )
+tile_type = "Soil"
+
+[node name="Tile1195" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12256, 799 )
+tile_type = "Soil"
+
+[node name="Tile1196" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12320, 799 )
+tile_type = "Soil"
+
+[node name="Tile1197" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12256, 863 )
+tile_type = "Soil"
+
+[node name="Tile1198" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12320, 863 )
+tile_type = "Soil"
+
+[node name="Tile1199" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12384, 543 )
+
+[node name="Tile1200" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12384, 607 )
+tile_type = "Soil"
+
+[node name="Tile1201" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12384, 671 )
+tile_type = "Soil"
+
+[node name="Tile1202" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12384, 735 )
+tile_type = "Soil"
+
+[node name="Tile1203" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12384, 799 )
+tile_type = "Soil"
+
+[node name="Tile1204" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12384, 863 )
+tile_type = "Soil"
+
+[node name="Tile1205" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12448, 543 )
+
+[node name="Tile1206" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12512, 543 )
+
+[node name="Tile1207" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12448, 607 )
+tile_type = "Soil"
+
+[node name="Tile1208" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12512, 607 )
+tile_type = "Soil"
+
+[node name="Tile1209" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12448, 671 )
+tile_type = "Soil"
+
+[node name="Tile1210" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12512, 671 )
+tile_type = "Soil"
+
+[node name="Tile1211" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12448, 735 )
+tile_type = "Soil"
+
+[node name="Tile1212" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12512, 735 )
+tile_type = "Soil"
+
+[node name="Tile1213" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12448, 799 )
+tile_type = "Soil"
+
+[node name="Tile1214" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12512, 799 )
+tile_type = "Soil"
+
+[node name="Tile1215" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12448, 863 )
+tile_type = "Soil"
+
+[node name="Tile1216" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12512, 863 )
+tile_type = "Soil"
+
+[node name="Tile1217" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12576, 543 )
+
+[node name="Tile1218" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12640, 543 )
+
+[node name="Tile1219" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12576, 607 )
+tile_type = "Soil"
+
+[node name="Tile1220" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12640, 607 )
+tile_type = "Soil"
+
+[node name="Tile1221" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12576, 671 )
+tile_type = "Soil"
+
+[node name="Tile1222" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12640, 671 )
+tile_type = "Soil"
+
+[node name="Tile1223" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12576, 735 )
+tile_type = "Soil"
+
+[node name="Tile1224" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12640, 735 )
+tile_type = "Soil"
+
+[node name="Tile1225" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12576, 799 )
+tile_type = "Soil"
+
+[node name="Tile1226" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12640, 799 )
+tile_type = "Soil"
+
+[node name="Tile1227" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12576, 863 )
+tile_type = "Soil"
+
+[node name="Tile1228" parent="." instance=ExtResource( 8 )]
+position = Vector2( 12640, 863 )
+tile_type = "Soil"
+
+[node name="Tile1060" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10912, 543 )
+
+[node name="Tile1061" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10912, 607 )
+tile_type = "Soil"
+
+[node name="Tile1062" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10912, 671 )
+tile_type = "Soil"
+
+[node name="Tile1063" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10912, 735 )
+tile_type = "Soil"
+
+[node name="Tile1064" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10912, 799 )
+tile_type = "Soil"
+
+[node name="Tile1065" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10912, 863 )
+tile_type = "Soil"
+
+[node name="Tile1066" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10976, 543 )
+
+[node name="Tile1067" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10976, 607 )
+tile_type = "Soil"
+
+[node name="Tile1068" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10976, 671 )
+tile_type = "Soil"
+
+[node name="Tile1069" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10976, 735 )
+tile_type = "Soil"
+
+[node name="Tile1070" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10976, 799 )
+tile_type = "Soil"
+
+[node name="Tile1071" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10976, 863 )
+tile_type = "Soil"
+
+[node name="Tile1072" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11040, 543 )
+
+[node name="Tile1073" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11104, 543 )
+
+[node name="Tile1074" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11040, 607 )
+tile_type = "Soil"
+
+[node name="Tile1075" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11104, 607 )
+tile_type = "Soil"
+
+[node name="Tile1076" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11040, 671 )
+tile_type = "Soil"
+
+[node name="Tile1077" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11104, 671 )
+tile_type = "Soil"
+
+[node name="Tile1078" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11040, 735 )
+tile_type = "Soil"
+
+[node name="Tile1079" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11104, 735 )
+tile_type = "Soil"
+
+[node name="Tile1080" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11040, 799 )
+tile_type = "Soil"
+
+[node name="Tile1081" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11104, 799 )
+tile_type = "Soil"
+
+[node name="Tile1082" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11040, 863 )
+tile_type = "Soil"
+
+[node name="Tile1083" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11104, 863 )
+tile_type = "Soil"
+
+[node name="Tile1084" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11168, 543 )
+
+[node name="Tile1085" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11232, 543 )
+
+[node name="Tile1086" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11168, 607 )
+tile_type = "Soil"
+
+[node name="Tile1087" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11232, 607 )
+tile_type = "Soil"
+
+[node name="Tile1088" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11168, 671 )
+tile_type = "Soil"
+
+[node name="Tile1089" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11232, 671 )
+tile_type = "Soil"
+
+[node name="Tile1090" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11168, 735 )
+tile_type = "Soil"
+
+[node name="Tile1091" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11232, 735 )
+tile_type = "Soil"
+
+[node name="Tile1092" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11168, 799 )
+tile_type = "Soil"
+
+[node name="Tile1093" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11232, 799 )
+tile_type = "Soil"
+
+[node name="Tile1094" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11168, 863 )
+tile_type = "Soil"
+
+[node name="Tile1095" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11232, 863 )
+tile_type = "Soil"
+
+[node name="Tile1033" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10976, 415 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile1034" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10912, 479 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile1035" parent="." instance=ExtResource( 8 )]
+position = Vector2( 10976, 479 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile1036" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11040, 351 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile1037" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11040, 415 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile1038" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11040, 479 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile1039" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11168, 223 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile1040" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11104, 287 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile1041" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11168, 287 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile1042" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11104, 351 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile1043" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11168, 351 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile1044" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11104, 415 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile1045" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11168, 415 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile1046" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11104, 479 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile1047" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11168, 479 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile1048" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11232, 159 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile1102" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11296, 95 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile1049" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11296, 159 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile1050" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11232, 223 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile1051" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11296, 223 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile1052" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11232, 287 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile1053" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11296, 287 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile1054" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11232, 351 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile1055" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11296, 351 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile1056" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11232, 415 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile1057" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11296, 415 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile1058" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11232, 479 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile1059" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11296, 479 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile1096" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11296, 543 )
+
+[node name="Tile1097" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11296, 607 )
+tile_type = "Soil"
+
+[node name="Tile1098" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11296, 671 )
+tile_type = "Soil"
+
+[node name="Tile1099" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11296, 735 )
+tile_type = "Soil"
+
+[node name="Tile1100" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11296, 799 )
+tile_type = "Soil"
+
+[node name="Tile1101" parent="." instance=ExtResource( 8 )]
+position = Vector2( 11296, 863 )
+tile_type = "Soil"
+
+[node name="Tile951" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9824, 799 )
+tile_type = "Soil"
+
+[node name="Tile952" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9888, 799 )
+tile_type = "Soil"
+
+[node name="Tile953" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9824, 863 )
+tile_type = "Soil"
+
+[node name="Tile954" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9888, 863 )
+tile_type = "Soil"
+
+[node name="Tile955" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9952, 799 )
+tile_type = "Soil"
+
+[node name="Tile956" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9952, 863 )
+tile_type = "Soil"
+
+[node name="Tile938" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9824, 735 )
+tile_type = "Soil"
+
+[node name="Tile939" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9888, 415 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile940" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9952, 415 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile941" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9888, 479 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile942" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9952, 479 )
+tile_type = "BlockYellowDotted"
+
+[node name="Tile943" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9888, 543 )
+
+[node name="Tile944" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9952, 543 )
+
+[node name="Tile945" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9888, 607 )
+tile_type = "Soil"
+
+[node name="Tile946" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9952, 607 )
+tile_type = "Soil"
+
+[node name="Tile947" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9888, 671 )
+tile_type = "Soil"
+
+[node name="Tile948" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9952, 671 )
+tile_type = "Soil"
+
+[node name="Tile949" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9888, 735 )
+tile_type = "Soil"
+
+[node name="Tile950" parent="." instance=ExtResource( 8 )]
+position = Vector2( 9952, 735 )
+tile_type = "Soil"
+
+[node name="Tile277" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2656, 543 )
+
+[node name="Tile278" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2720, 543 )
+
+[node name="Tile279" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2656, 607 )
+tile_type = "Soil"
+
+[node name="Tile280" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2720, 607 )
+tile_type = "Soil"
+
+[node name="Tile281" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2656, 671 )
+tile_type = "Soil"
+
+[node name="Tile282" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2720, 671 )
+tile_type = "Soil"
+
+[node name="Tile283" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2656, 735 )
+tile_type = "Soil"
+
+[node name="Tile284" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2720, 735 )
+tile_type = "Soil"
+
+[node name="Tile285" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2656, 799 )
+tile_type = "Soil"
+
+[node name="Tile286" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2720, 799 )
+tile_type = "Soil"
+
+[node name="Tile287" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2656, 863 )
+tile_type = "Soil"
+
+[node name="Tile288" parent="." instance=ExtResource( 8 )]
+position = Vector2( 2720, 863 )
+tile_type = "Soil"
+
+[node name="BladeMetal2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 2211, 478 )
+horizontal_enemy = true
+blade_type = "BladeGreen"
+
+[node name="BladeMetal4" parent="." instance=ExtResource( 9 )]
+position = Vector2( 1635, 478 )
+horizontal_enemy = true
+blade_type = "BladeGreen"
+
+[node name="BladeMetal3" parent="." instance=ExtResource( 9 )]
+position = Vector2( 2279, 478 )
+horizontal_enemy = true
+blade_type = "BladeGreen"
+
+[node name="BladeMetal7" parent="." instance=ExtResource( 9 )]
+position = Vector2( 4191, 478 )
+vertical_enemy = true
+blade_type = "BladeGreen"
+
+[node name="BladeMetal14" parent="." instance=ExtResource( 9 )]
+position = Vector2( 4639, 478 )
+horizontal_enemy = true
+blade_type = "BladeGreen"
+
+[node name="BladeMetal15" parent="." instance=ExtResource( 9 )]
+position = Vector2( 3427, 478 )
+horizontal_enemy = true
+blade_type = "BladeGreen"
+
+[node name="BladeMetal8" parent="." instance=ExtResource( 9 )]
+position = Vector2( 5215, 478 )
+vertical_enemy = true
+blade_type = "BladeGreen"
+
+[node name="BladeMetal9" parent="." instance=ExtResource( 9 )]
+position = Vector2( 8159, 478 )
+vertical_enemy = true
+blade_type = "BladeGreen"
+
+[node name="BladeMetal12" parent="." instance=ExtResource( 9 )]
+position = Vector2( 8159, 478 )
+horizontal_enemy = true
+blade_type = "BladeGreen"
+
+[node name="BladeMetal10" parent="." instance=ExtResource( 9 )]
+position = Vector2( 7519, 478 )
+vertical_enemy = true
+blade_type = "BladeGreen"
+
+[node name="BladeMetal11" parent="." instance=ExtResource( 9 )]
+position = Vector2( 7519, 478 )
+horizontal_enemy = true
+blade_type = "BladeGreen"
+
+[node name="BladeMetal5" parent="." instance=ExtResource( 9 )]
+position = Vector2( 10020, 476 )
+horizontal_enemy = true
+blade_type = "BladeGreen"
+
+[node name="BladeMetal6" parent="." instance=ExtResource( 9 )]
+position = Vector2( 8804, 476 )
+horizontal_enemy = true
+blade_type = "BladeGreen"
+
+[node name="BladeMetal13" parent="." instance=ExtResource( 9 )]
+position = Vector2( 9116, 476 )
+horizontal_enemy = true
+blade_type = "BladeGreen"
+
+[node name="Barrier2" parent="." instance=ExtResource( 14 )]
+position = Vector2( 12160, 141 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+autoplay = true
+
+[node name="Key" parent="." instance=ExtResource( 12 )]
+position = Vector2( 8066, 270 )

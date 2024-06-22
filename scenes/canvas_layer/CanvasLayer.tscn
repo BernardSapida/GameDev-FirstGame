@@ -1,0 +1,74 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/Sprites/key/KeyEmpty.png" type="Texture" id=1]
+[ext_resource path="res://assets/Sprites/coin/CoinYellow.png" type="Texture" id=2]
+[ext_resource path="res://assets/Font/ScoreFont.tres" type="DynamicFont" id=3]
+[ext_resource path="res://scenes/canvas_layer/UI.gd" type="Script" id=4]
+[ext_resource path="res://assets/Sprites/power_up/Fire.png" type="Texture" id=5]
+[ext_resource path="res://assets/Sprites/heart/HeartFull.png" type="Texture" id=6]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="UI" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 4 )
+
+[node name="KeyRect" type="TextureRect" parent="UI"]
+margin_left = 19.0
+margin_top = 154.0
+margin_right = 107.0
+margin_bottom = 213.0
+rect_scale = Vector2( 0.35, 0.35 )
+texture = ExtResource( 1 )
+
+[node name="ScoreRect" type="TextureRect" parent="UI"]
+margin_left = 18.0
+margin_top = 17.0
+margin_right = 78.0
+margin_bottom = 77.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+
+[node name="ScoreText" type="Label" parent="UI"]
+margin_left = 65.0
+margin_top = 15.0
+margin_right = 162.0
+margin_bottom = 49.0
+custom_fonts/font = ExtResource( 3 )
+text = "0"
+valign = 1
+
+[node name="FireRect" type="TextureRect" parent="UI"]
+margin_left = 1.0
+margin_top = 65.0
+margin_right = 1024.0
+margin_bottom = 636.0
+rect_scale = Vector2( 0.05, 0.05 )
+texture = ExtResource( 5 )
+
+[node name="FireRemainingText" type="Label" parent="UI"]
+margin_left = 65.0
+margin_top = 62.0
+margin_right = 162.0
+margin_bottom = 96.0
+custom_fonts/font = ExtResource( 3 )
+text = "0"
+valign = 1
+
+[node name="LifeRect" type="TextureRect" parent="UI"]
+margin_left = 19.0
+margin_top = 113.0
+margin_right = 79.0
+margin_bottom = 173.0
+rect_scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 6 )
+
+[node name="LifeRemainingText" type="Label" parent="UI"]
+margin_left = 65.0
+margin_top = 107.0
+margin_right = 162.0
+margin_bottom = 141.0
+custom_fonts/font = ExtResource( 3 )
+text = "0"
+valign = 1
